@@ -37,6 +37,7 @@ function Navbar() {
                             duration= {500}
                         >Content2</Link>
                     </li>
+                    
                     {/* <li className="btn btn-primary" onClick={()=>{scroll.scrollToTop()}}>to top</li> */}
                 </ul>
         </nav>
