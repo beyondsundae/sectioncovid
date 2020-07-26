@@ -53,29 +53,40 @@
 }
 
 .navbar ul li {
-  color: white;
+  color: black;
   padding-left: 20px;
   display: inline;
   cursor: pointer;
 }
 
+.navbar ul li > .active{
+  border-bottom: 3px solid black;
+  font-size: 3vh;
+  
+}
+
+.hommie {
+  height: 100vh;
+  background: white;
+}
+
 .main {
   height: 100vh;
-  background-color: mediumpurple;
+  background-color:white;
 }
 
 .content {
   height: 100vh;
-  background-color: coral;
+  background-color: white;
 }
 
 .content2 {
   height: 100vh;
-  background-color: gray;
+  background-color: white;
 }
 
-.navbar ul li > .active{
-  border-bottom: 3px solid white;
-  font-size: 3vh;
-  
-}
+
+
+/* #ValueCovid {
+
+ */

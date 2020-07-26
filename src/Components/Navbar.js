@@ -4,8 +4,19 @@ import { Link, animateScroll as scroll } from "react-scroll";
 function Navbar() {
     return (
         <div>
-            <nav className="navbar">
+            <nav className="navbar pt-5">
                 <ul className="nav-items">
+                    <li className="nav-item">
+                        <Link
+                            activeClass="active"
+                            to="hommie"
+                            spy={true}
+                            smooth={true}
+                            offset={0}
+                            duration= {500}
+                            isDynamic={true}
+                        >Hommie</Link>
+                    </li>
                     <li className="nav-item">
                         <Link
                             activeClass="active"
