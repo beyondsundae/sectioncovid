@@ -44,12 +44,13 @@
   color: white;
   font-size: 2.5vh;
   text-align: left;
-  
+ 
 }
 
 .navbar ul {
   list-style: none;
   text-align: left;
+  
 }
 
 .navbar ul li {
@@ -57,6 +58,7 @@
   padding-left: 20px;
   display: inline;
   cursor: pointer;
+  
 }
 
 .navbar ul li > .active{
@@ -86,6 +88,84 @@
 }
 
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  #hommie {
+    border: 10px solid red;
+    background-image: url("./Components/SVG/virus-bg.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 40%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  #hommie {
+    border: 10px solid green;
+    background-image: url("./Components/SVG/virus-bg.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 50%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  #hommie {
+    border: 10px solid blue;
+    background-image: url("./Components/SVG/virus-bg.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 60%;
+    
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  #hommie {
+    border: 10px solid purple;
+    background-image: url("./Components/SVG/virus-bg.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 50%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  #hommie {
+    border: 10px solid orange;
+    background-image: url("./Components/SVG/virus-bg.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 50%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1920px and up) */
+@media only screen and (min-width: 1920px) {
+  #hommie {
+    border: 10px solid pink;
+    background-image: url("./Components/SVG/virus-bg.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 45% ;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 2560px and up) */
+@media only screen and (min-width: 2560px) {
+  #hommie {
+    border: 10px solid black;
+    background-image: url("./Components/SVG/virus-bg.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 45% ;
+    
+  }
+}
 
 /* #ValueCovid {
 

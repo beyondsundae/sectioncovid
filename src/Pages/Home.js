@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
+import ReactPageScroller from "react-page-scroller";
 
 import Navbar from '../Components/Navbar';
 import Main from '../Components/Main';
@@ -30,11 +31,13 @@ function Home() {
     
     return (
         <div>
+            <ReactPageScroller>
+                <Hommie updateDate ={ Data }/>
+                <Main/>
+                <Content/>
+                <Content2/>
+            </ReactPageScroller>
             <Navbar/>
-            <Hommie updateDate ={ Data }/>
-            <Main/>
-            <Content/>
-            <Content2/>
         </div>
     )
 }
