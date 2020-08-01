@@ -18,18 +18,19 @@ function Hommie( props ) {
         },
 
         Paddingtop:{
-            paddingTop: "5vh"
+            height: "5vh"
         },
         
         AreaContent:{
-            height: "95vh"
+            height: "94vh",
+            border: "1px solid red"
         }
         
     })
     // position: "relative", zIndex: "2", top:"0px", right:"0px"
     return (
-        <div className="hommie" id="hommie">
-            <div className="container-fluid " style={ Style.Paddingtop }/>
+        <div className="hommie container-fluid" id="hommie">
+            <div className="container-fluid border border-danger" style={ Style.Paddingtop }/>
 
             <div className='container-fluid' style={ Style.AreaContent }>
                 <div className="row mt-5" style={{paddingTop: "20vh"}}>

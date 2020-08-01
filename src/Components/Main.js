@@ -5,10 +5,10 @@ import Container from '@material-ui/core/Container';
 function Main() {
     const Style = ({ 
         PaddingTop:{ 
-            paddingTop: "5vh" 
+            height: "5vh" 
         },
         AreaContent:{
-            height: "95vh"
+            height: "94vh"
         }
     })
     

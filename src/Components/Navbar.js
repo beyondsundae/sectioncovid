@@ -4,44 +4,45 @@ import { Link, animateScroll as scroll } from "react-scroll";
 function Navbar() {
     return (
         <div>
-            <nav className="navbar pt-5">
+            <nav className="navbar pt-4">
                 <ul className="nav-items">
                     <li className="nav-item">
-                        <Link
+                        <a
                             activeClass="active"
-                            to="hommie"
+                            class="active"
+                            href="#sectionOne"
                             spy={true}
                             smooth={true}
                             offset={0}
                             duration= {500}
                             isDynamic={true}
-                        >Hommie</Link>
+                        >Hommie</a>
                     </li>
                     <li className="nav-item">
-                        <Link
+                        <a
                             activeClass="active"
-                            to="main"
+                            href="#sectionTwo"
                             spy={true}
                             smooth={true}
                             offset={0}
                             duration= {500}
                             isDynamic={true}
-                        >Main</Link>
+                        >Main</a>
                     </li>
                     <li className="nav-item">
-                        <Link
+                        <a
                             activeClass="active"
-                            to="content"
+                            href="#sectionThree"
                             spy={true}
                             smooth={true}
                             offset={0}
                             duration= {500}
-                        >Content</Link>
+                        >Content</a>
                     </li>
                     <li className="nav-item">
                         <Link
                             activeClass="active"
-                            to="content2"
+                            href="#sectionFour"
                             spy={true}
                             smooth={true}
                             offset={0}

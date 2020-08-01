@@ -20,7 +20,7 @@ function Home() {
         activeClass:          'active',
         sectionClassName:     'section',
         anchors:              ['sectionOne', 'sectionTwo', 'sectionThree'],
-        delay:                700,
+        delay:                500,
         navigation:           true,
         verticalAlign:        false,
        
@@ -78,37 +78,40 @@ function Home() {
         }}
     /> */}
             
-            <Header>
-                <a href="#sectionOne" className="opa">Section One</a>
-                <a href="#sectionTwo">Section Two</a>
-                <a href="#sectionThree">Section Three</a>
+            <Header className='test'>
+                <a href="#sectionOne" >Section One</a>
+                <a href="#sectionTwo" >Section Two</a>
+                <a href="/" >Section Three</a>
             </Header>
             <Footer>
                 <a href="" className="opa">Dcoumentation</a>
                 <a href="">Example Source</a>
                 <a href="">About</a>
             </Footer>
-            <ScrollToTopOnMount />
+
+           
+            
             <SectionsContainer {...options}>
                 <Section><Hommie updateDate ={ Data }/></Section>
-                <Section>Page 2</Section>
-                <Section>Page 3</Section>
+                <Section><Main/></Section>
+                <Section><Content/></Section>
             </SectionsContainer>
+            <Navbar/>
 
             {/* <Header>
-                <a href="#sectionOne">Section One</a>
-                <a href="#sectionTwo">Section Two</a>
-                <a href="#sectionThree">Section Three</a>
+            <a href="#sectionOne">Section One</a>
+            <a href="#sectionTwo">Section Two</a>
+            <a href="/">Section Three</a>
             </Header>
             <Footer>
-                <a href="">Dcoumentation</a>
-                <a href="">Example Source</a>
-                <a href="">About</a>
+            <a href="">Dcoumentation</a>
+            <a href="">Example Source</a>
+            <a href="">About</a>
             </Footer>
-            <SectionsContainer className="container" {...options}>
-                <Section className="custom-section" verticalAlign="true" color="#69D2E7">Page 1</Section>
-                <Section color="#A7DBD8">Page 2</Section>
-                <Section color="#E0E4CC">Page 3</Section>
+            <SectionsContainer  {...options}>
+            <Section color="#69D2E7">Page 1</Section>
+            <Section color="#A7DBD8">Page 2</Section>
+            <Section color="#E0E4CC">Page 3</Section>
             </SectionsContainer> */}
         </div>
     )
