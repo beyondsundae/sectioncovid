@@ -5,10 +5,12 @@ import Container from '@material-ui/core/Container';
 function Main() {
     const Style = ({ 
         PaddingTop:{ 
-            height: "5vh" 
+            height: "5vh",
+            
         },
         AreaContent:{
-            height: "94vh"
+            height: "90vh",
+            
         }
     })
     
@@ -45,7 +47,7 @@ function Main() {
             <div className='container-fluid' style={ Style.PaddingTop }/>
                
             <div className='container-fluid' style={ Style.AreaContent }>
-                <div className='row mt-5'>
+                <div className='row mt-5' style={{paddingTop: "20vh"}}>
                     <div className='p-5 col text-center border border-success'>
                         <div className="display-3" id="ValueCovid">
                             { Infected }

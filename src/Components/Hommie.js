@@ -1,57 +1,75 @@
 import React from 'react'
 import virus from "./SVG/virus.svg"
 import virusMain from "./SVG/virus-main.svg"
-
 import zIndex from '@material-ui/core/styles/zIndex'
 
 function Hommie( props ) {
     const Style =({
-        Background:{
-            
-            backgroundImage: `url(${virus})`, 
-            backgroundRepeat: "no-repeat",
-            zIndex: -5,
-            backgroundPosition: "50vh -20vh",
-            backgroundSize: "50vh 50vh",
-            border: "5px solid red"
-         
-        },
+        
 
         Paddingtop:{
             height: "5vh"
         },
         
         AreaContent:{
-            height: "94vh",
-            border: "1px solid red"
+            height: "88vh",
+        },
+
+        AreaFooter:{
+            height: "5vh",
+            color: "white",
+            bottom: "0",
+            fontWeight: "bold",
+            
+           
         }
         
     })
-    // position: "relative", zIndex: "2", top:"0px", right:"0px"
+    // border border-danger"
     return (
-        <div className="hommie container-fluid" id="hommie">
-            <div className="container-fluid border border-danger" style={ Style.Paddingtop }/>
+        <div className="hommie" id="hommie" >
+            <div className="container-fluid " style={ Style.Paddingtop }/>
 
             <div className='container-fluid' style={ Style.AreaContent }>
                 <div className="row mt-5" style={{paddingTop: "20vh"}}>
                     {/* <div className="row border border-danger"> */}
-                    <div className="col-7">
-                        <img style={{width: "50%"}} src={virusMain}/>
+                    <div className="col-1 text-left ">
+                        {/* <img style={{width: "100%%"}} src={virusMain}/> */}
                     </div>
                     {/* </div> */}
 
-                    <div style={{border: "solid 5px black", height:"40vh"}}/>
+                    <div className="VerticalLine"/>
 
-                    <div className="col  pt-5" id="shit">
-                        <div className="pt-5">
-                            <div className="display-1" style={{textAlign: "left"}}>Covid-19</div>
-                            <div className="display-4" style={{textAlign: "left"}}>Thailand Situation</div>
-                            <p style={{textAlign: "left"}}>Last update: { props.updateDate }</p>
+                    <div className="col  pt-5">
+                        <div className="pt-5" style={{color:'white'}}>
+                            <div className="Textcovid" style={{textAlign: "left"}}>Covid-19</div>
+                            <div className="TextSituation" style={{textAlign: "left"}}>Thailand Situation</div>
+                            <p className="TextUpdate" style={{textAlign: "left"}}>Last update: { props.updateDate }</p>
                         </div>
                     </div>
 
                 </div>
+
+                <div className="FooterMe row pl-5" >
+                    By  <a target="_blank" href="https://github.com/beyondsundae">
+                            <img 
+                                src="https://avatars2.githubusercontent.com/u/59742129?s=60&v=4" 
+                                alt="Beyondsundae"
+                                style={{ borderRadius: "50%", width: "60%" }}>
+
+                            </img>
+                        </a>
+                    and API from <a target="_blank" href="https://covid19.th-stat.com/api/open/today">
+                                <img   
+                                    src="https://covid19.th-stat.com/img/covid_19/logo_kid.png"
+                                    alt="API"
+                                    style={{ height: "32px", paddingLeft: "15px"}}>
+                                    
+                                </img>
+                            </a>
+                </div>
             </div>
+            
         </div>
     )
 }

@@ -38,21 +38,20 @@
 }
 
 a{
-  color: black;
+  color: white;
 }
 a:hover{
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
 .navbar {
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 35%;
   color: white;
   font-size: 2.5vh;
   text-align: left;
- 
 }
 
 .navbar ul {
@@ -62,16 +61,20 @@ a:hover{
 }
 
 .navbar ul li {
-  color: black;
-  padding-left: 20px;
+  color: white;
+  margin-left: 10%;
   display: inline;
   cursor: pointer;
-  
   
 }
 
 .navbar ul li > .active{
-  border-bottom: 5px solid black;
+  border-bottom: 5px solid white;
+  color:white;
+  /* border-radius: 10%; */
+  /* background-color: white; */
+  /* border:2px solid white; */
+  padding:5px;
   font-size: 3vh;
   
 }
@@ -83,13 +86,13 @@ a:hover{
 
 .hommie {
   height: 100vh;
-  background: white;
+  background: black;
 }
 
 .main {
   
-  height: 100vh;
-  background-color:white;
+  height: 100%;
+  background: white;
 }
 
 .content {
@@ -108,8 +111,12 @@ a:hover{
   #hommie {
     background-image: url("./Components/SVG/virus-bg.svg");
     background-repeat: no-repeat;
-    background-position: top right;
+    background-position: right;
     background-size: 40%;
+  }
+
+  .Textcovid{
+    font-size:4rem;
   }
 }
 
@@ -118,29 +125,56 @@ a:hover{
   #hommie {
     background-image: url("./Components/SVG/virus-bg.svg");
     background-repeat: no-repeat;
-    background-position: top right;
+    background-position: right;
     background-size: 50%;
+    
+  }
+
+  .Textcovid{
+    font-size:5rem;
   }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
+/* Medium devices (landscape tablets, 768px and up) iPad Vertical */ 
 @media only screen and (min-width: 768px) {
   #hommie {
     background-image: url("./Components/SVG/virus-bg.svg");
     background-repeat: no-repeat;
-    background-position: top right;
+    background-position: right;
     background-size: 60%;
     
   }
+
+  .Textcovid{
+    font-size:7rem;
+  }
+
+  .FooterMe{
+    margin-top: 45%;
+    height: 5%;
+    color: white;
+    font-weight: bold;
+  }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
+/* Large devices (laptops/desktops, 992px and up)  iPad Horizon */
 @media only screen and (min-width: 992px) {
   #hommie {
     background-image: url("./Components/SVG/virus-bg.svg");
     background-repeat: no-repeat;
-    background-position: top right;
+    background-position: right;
     background-size: 50%;
+  }
+
+  .Textcovid{
+    font-size:8rem;
+  }
+
+  .FooterMe{
+    margin-top: 13%;
+    height: 5%;
+    color: white;
+    font-weight: bold;
   }
 }
 
@@ -149,31 +183,63 @@ a:hover{
   #hommie {
     background-image: url("./Components/SVG/virus-bg.svg");
     background-repeat: no-repeat;
-    background-position: top right;
+    background-position: right;
     background-size: 40%;
   }
+
+  .Textcovid{
+    font-size:15rem;
+  }
+
+  
 }
 
-/* Extra large devices (large laptops and desktops, 1920px and up) */
+/* Extra large devices (large laptops and desktops, 1920px and up) Desktop Screen */
 @media only screen and (min-width: 1920px) {
   #hommie {
     background-image: url("./Components/SVG/virus-bg.svg");
     background-repeat: no-repeat;
-    background-position: top right;
-    background-size: 45% ;
+    background-position: right;
+    background-size: 70% ;
+  }
+
+  .Textcovid{
+    font-size:10rem;
+    font-weight: bold;
+  }
+
+  .TextSituation {
+    font-size: 5rem;
+  }
+
+  .TextUpdate{
+    font-size: 2rem;
+  }
+
+  .VerticalLine{
+    border: 5px solid white; 
+    height: 20vh;
+    margin-top: 19%;
+  }
+
+  .FooterMe{
+    margin-top: 2%;
+    height: 5%;
+    color: white;
+    font-weight: bold;
   }
 }
 
 /* Extra large devices (large laptops and desktops, 2560px and up) */
-@media only screen and (min-width: 2560px) {
+/* @media only screen and (min-width: 2560px) {
   #hommie {
     background-image: url("./Components/SVG/virus-bg.svg");
     background-repeat: no-repeat;
-    background-position: top right;
+    background-position: right;
     background-size: 45% ;
     
   }
-}
+} */
 
 /* #ValueCovid {
 

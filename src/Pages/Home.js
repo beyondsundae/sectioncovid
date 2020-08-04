@@ -23,7 +23,7 @@ function Home() {
         delay:                500,
         navigation:           true,
         verticalAlign:        false,
-       
+        // scrollBar:            true,
       };
 
     const Getdata = async () => {
@@ -78,20 +78,20 @@ function Home() {
         }}
     /> */}
             
-            <Header className='test'>
+            {/* <Header className='test'>
                 <a href="#sectionOne" >Section One</a>
                 <a href="#sectionTwo" >Section Two</a>
                 <a href="/" >Section Three</a>
-            </Header>
-            <Footer>
-                <a href="" className="opa">Dcoumentation</a>
+            </Header> */}
+            {/* <Footer >
+                <a href="">Dcoumentation</a>
                 <a href="">Example Source</a>
                 <a href="">About</a>
-            </Footer>
+            </Footer> */}
 
            
             
-            <SectionsContainer {...options}>
+            <SectionsContainer  {...options}>
                 <Section><Hommie updateDate ={ Data }/></Section>
                 <Section><Main/></Section>
                 <Section><Content/></Section>
@@ -108,7 +108,7 @@ function Home() {
             <a href="">Example Source</a>
             <a href="">About</a>
             </Footer>
-            <SectionsContainer  {...options}>
+            <SectionsContainer className="container" {...options}>
             <Section color="#69D2E7">Page 1</Section>
             <Section color="#A7DBD8">Page 2</Section>
             <Section color="#E0E4CC">Page 3</Section>
