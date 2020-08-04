@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/sectioncovid/static/css/main.dd09f585.chunk.css",
+    "main.js": "/sectioncovid/static/js/main.ffaef568.chunk.js",
+    "main.js.map": "/sectioncovid/static/js/main.ffaef568.chunk.js.map",
+    "runtime-main.js": "/sectioncovid/static/js/runtime-main.fe138be3.js",
+    "runtime-main.js.map": "/sectioncovid/static/js/runtime-main.fe138be3.js.map",
+    "static/js/2.e0225feb.chunk.js": "/sectioncovid/static/js/2.e0225feb.chunk.js",
+    "static/js/2.e0225feb.chunk.js.map": "/sectioncovid/static/js/2.e0225feb.chunk.js.map",
+    "index.html": "/sectioncovid/index.html",
+    "precache-manifest.66185c404aa3f17eda794929ecefd7dc.js": "/sectioncovid/precache-manifest.66185c404aa3f17eda794929ecefd7dc.js",
+    "service-worker.js": "/sectioncovid/service-worker.js",
+    "static/css/main.dd09f585.chunk.css.map": "/sectioncovid/static/css/main.dd09f585.chunk.css.map",
+    "static/js/2.e0225feb.chunk.js.LICENSE.txt": "/sectioncovid/static/js/2.e0225feb.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/sectioncovid/static/media/logo.5d5d9eef.svg",
+    "static/media/virus icon.svg": "/sectioncovid/static/media/virus icon.3ab1e1b8.svg",
+    "static/media/App.css": "/sectioncovid/static/media/virus-bg.f9ec0d6f.svg",
+    "static/media/virus-main.svg": "/sectioncovid/static/media/virus-main.cd89a91c.svg",
+    "static/media/virus.svg": "/sectioncovid/static/media/virus.283be8c5.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fe138be3.js",
+    "static/js/2.e0225feb.chunk.js",
+    "static/css/main.dd09f585.chunk.css",
+    "static/js/main.ffaef568.chunk.js"
+  ]
+}
