@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  /* font-family: 'Mitr';
+  src: local('Mitr'), url('./Components/Fonts/MitrRegular.ttf') format('truetype'); */
 }
 
 .App-logo {
@@ -37,18 +39,19 @@
   }
 }
 
-a{
-  color: white;
+/* a{
+  color: white !important;
 }
+
 a:hover{
   color: white;
   text-decoration: none;
-}
+} */
 
 .navbar {
   position: fixed;
   top: 0;
-  width: 35%;
+  /* width: 35%; */
   color: white;
   font-size: 2.5vh;
   text-align: left;
@@ -57,6 +60,7 @@ a:hover{
 .navbar ul {
   list-style: none;
   text-align: left;
+  padding-left: 10px;
   
 }
 
@@ -66,18 +70,19 @@ a:hover{
   display: inline;
   cursor: pointer;
   
+  
 }
 
 .navbar ul li > .active{
-  border-bottom: 5px solid white;
-  color:white;
+  border-bottom: 3px solid white;
+  transition:all 0.7s ease-in-out;
   /* border-radius: 10%; */
   /* background-color: white; */
   /* border:2px solid white; */
-  padding:5px;
+  padding-bottom:5px;
   font-size: 3vh;
-  
 }
+
 
 /* .test>a.active{
   border-bottom: 3px solid red;
@@ -86,13 +91,23 @@ a:hover{
 
 .hommie {
   height: 100vh;
-  background: black;
+  background:rgba(0,0,0,0.85)
 }
 
 .main {
+  height: 100vh;
   
-  height: 100%;
-  background: white;
+  /* background: linear-gradient(
+    180deg, 
+    rgba(0,0,0,0.85) 7%, 
+    rgba(255,255,255,1) 20%, 
+    rgba(255,255,255,1) 80%); */
+    
+}
+
+.ex1.active{
+  border-bottom: 3px solid white !important;
+  
 }
 
 .content {
@@ -106,29 +121,82 @@ a:hover{
 }
 
 
-/* Extra small devices (phones, 600px and down) */
+/* Extra small devices (phones, 600px and down) Mobile */
 @media only screen and (max-width: 600px) {
-  #hommie {
+  .hommie {
     background-image: url("./Components/SVG/virus-bg.svg");
     background-repeat: no-repeat;
-    background-position: right;
-    background-size: 40%;
+    background-position: right 75%;
+    background-size: 70%;
+  }
+
+  .main{
+    background-image:url("./Components/SVG/Background/wave (1).svg");
+    transition:background-image 1s ease-in-out;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 320%;
+    }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    /* width: 35%; */
+    color: white;
+    font-size: 1.5vh;
+    text-align: left;
+  }
+
+  .navbar ul li {
+    color: white;
+    margin-left: 5%;
+    display: inline;
+    cursor: pointer;
+  }
+
+  .navbar ul li > .active{
+    border-bottom: 3px solid white;
+    color:white;
+    /* border-radius: 10%; */
+    /* background-color: white; */
+    /* border:2px solid white; */
+    padding-bottom:5px;
+    font-size: 1.7vh;
   }
 
   .Textcovid{
     font-size:4rem;
   }
+
+  .FooterMe{
+    margin-top: 1%;
+    height: 5%;
+    color: white;
+    font-weight: bold;
+  }
+
+  .ScrollMouse{
+    padding-top: 50%;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  #hommie {
+  .hommie {
     background-image: url("./Components/SVG/virus-bg.svg");
     background-repeat: no-repeat;
     background-position: right;
     background-size: 50%;
-    
   }
+
+  .main{
+    background-image:url("./Components/SVG/Background/wave (1).svg");
+    transition:background-image 1s ease-in-out;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 320%;
+    border: 1px solid red;
+    }
 
   .Textcovid{
     font-size:5rem;
@@ -137,50 +205,75 @@ a:hover{
 
 /* Medium devices (landscape tablets, 768px and up) iPad Vertical */ 
 @media only screen and (min-width: 768px) {
-  #hommie {
+  .hommie {
     background-image: url("./Components/SVG/virus-bg.svg");
     background-repeat: no-repeat;
-    background-position: right;
-    background-size: 60%;
+    background-position: bottom right;
+    background-size: 70%;
     
   }
+
+  .main{
+    background-image:url("./Components/SVG/Background/wave (2).svg");
+    transition:background-image 1s ease-in-out;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    border: 1px solid green;
+    }
 
   .Textcovid{
     font-size:7rem;
   }
 
   .FooterMe{
-    margin-top: 45%;
+    margin-top: 5%;
     height: 5%;
     color: white;
     font-weight: bold;
+  }
+
+  .ScrollMouse{
+    padding-top: 40%;
   }
 }
 
 /* Large devices (laptops/desktops, 992px and up)  iPad Horizon */
 @media only screen and (min-width: 992px) {
-  #hommie {
+  .hommie {
     background-image: url("./Components/SVG/virus-bg.svg");
     background-repeat: no-repeat;
     background-position: right;
     background-size: 50%;
   }
 
+  .main{
+    background-image:url("./Components/SVG/Background/wave (0).svg");
+    transition:background-image 1s ease-in-out;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 110%;
+    }
+
   .Textcovid{
     font-size:8rem;
   }
 
   .FooterMe{
-    margin-top: 13%;
+    margin-top: 0%;
     height: 5%;
     color: white;
     font-weight: bold;
+  }
+
+  .ScrollMouse{
+    padding-top: 12%;
   }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  #hommie {
+  .hommie {
     background-image: url("./Components/SVG/virus-bg.svg");
     background-repeat: no-repeat;
     background-position: right;
@@ -196,11 +289,18 @@ a:hover{
 
 /* Extra large devices (large laptops and desktops, 1920px and up) Desktop Screen */
 @media only screen and (min-width: 1920px) {
-  #hommie {
+  .hommie {
     background-image: url("./Components/SVG/virus-bg.svg");
     background-repeat: no-repeat;
     background-position: right;
     background-size: 70% ;
+  }
+
+  .main{
+  background-image:url("./Components/SVG/Background/wave (0).svg");
+  background-repeat: no-repeat;
+  background-position: top 20%;
+  background-size: 100% ;
   }
 
   .Textcovid{
@@ -219,14 +319,18 @@ a:hover{
   .VerticalLine{
     border: 5px solid white; 
     height: 20vh;
-    margin-top: 19%;
+    margin-top: 17%;
   }
-
+  /* Bott and Foot depend on both margin-top */
   .FooterMe{
-    margin-top: 2%;
+    margin-top: 0%;
     height: 5%;
     color: white;
     font-weight: bold;
+  }
+
+  .ScrollMouse{
+    padding-top: 2%;
   }
 }
 
@@ -240,7 +344,3 @@ a:hover{
     
   }
 } */
-
-/* #ValueCovid {
-
- */

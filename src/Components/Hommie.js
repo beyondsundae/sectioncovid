@@ -1,6 +1,7 @@
 import React from 'react'
 import virus from "./SVG/virus.svg"
 import virusMain from "./SVG/virus-main.svg"
+import Scrolldown from "./GIF/Scroll+Gif.gif"
 import zIndex from '@material-ui/core/styles/zIndex'
 
 function Hommie( props ) {
@@ -12,7 +13,7 @@ function Hommie( props ) {
         },
         
         AreaContent:{
-            height: "88vh",
+            height: "82vh",
         },
 
         AreaFooter:{
@@ -20,18 +21,16 @@ function Hommie( props ) {
             color: "white",
             bottom: "0",
             fontWeight: "bold",
-            
-           
         }
         
     })
     // border border-danger"
     return (
         <div className="hommie" id="hommie" >
-            <div className="container-fluid " style={ Style.Paddingtop }/>
+            <div className="container-fluid" style={ Style.Paddingtop }/>
 
             <div className='container-fluid' style={ Style.AreaContent }>
-                <div className="row mt-5" style={{paddingTop: "20vh"}}>
+                <div className="row mt-5" style={{paddingTop: "13vh"}}>
                     {/* <div className="row border border-danger"> */}
                     <div className="col-1 text-left ">
                         {/* <img style={{width: "100%%"}} src={virusMain}/> */}
@@ -40,7 +39,7 @@ function Hommie( props ) {
 
                     <div className="VerticalLine"/>
 
-                    <div className="col  pt-5">
+                    <div className="col">
                         <div className="pt-5" style={{color:'white'}}>
                             <div className="Textcovid" style={{textAlign: "left"}}>Covid-19</div>
                             <div className="TextSituation" style={{textAlign: "left"}}>Thailand Situation</div>
@@ -48,6 +47,14 @@ function Hommie( props ) {
                         </div>
                     </div>
 
+                </div>
+
+                <div className="ScrollMouse row justify-content-center" >
+                    <img 
+                        src={Scrolldown}
+                        style={{height: "100px"}}>
+
+                    </img>
                 </div>
 
                 <div className="FooterMe row pl-5" >

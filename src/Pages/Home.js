@@ -97,6 +97,7 @@ function Home() {
                 <Section><Content/></Section>
             </SectionsContainer>
             <Navbar/>
+            
 
             {/* <Header>
             <a href="#sectionOne">Section One</a>
