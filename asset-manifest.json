@@ -1,27 +1,33 @@
 {
   "files": {
-    "main.css": "/sectioncovid/static/css/main.dd09f585.chunk.css",
-    "main.js": "/sectioncovid/static/js/main.ffaef568.chunk.js",
-    "main.js.map": "/sectioncovid/static/js/main.ffaef568.chunk.js.map",
+    "main.css": "/sectioncovid/static/css/main.266daa42.chunk.css",
+    "main.js": "/sectioncovid/static/js/main.066e7494.chunk.js",
+    "main.js.map": "/sectioncovid/static/js/main.066e7494.chunk.js.map",
     "runtime-main.js": "/sectioncovid/static/js/runtime-main.fe138be3.js",
     "runtime-main.js.map": "/sectioncovid/static/js/runtime-main.fe138be3.js.map",
-    "static/js/2.e0225feb.chunk.js": "/sectioncovid/static/js/2.e0225feb.chunk.js",
-    "static/js/2.e0225feb.chunk.js.map": "/sectioncovid/static/js/2.e0225feb.chunk.js.map",
+    "static/js/2.97310dda.chunk.js": "/sectioncovid/static/js/2.97310dda.chunk.js",
+    "static/js/2.97310dda.chunk.js.map": "/sectioncovid/static/js/2.97310dda.chunk.js.map",
     "index.html": "/sectioncovid/index.html",
-    "precache-manifest.66185c404aa3f17eda794929ecefd7dc.js": "/sectioncovid/precache-manifest.66185c404aa3f17eda794929ecefd7dc.js",
+    "precache-manifest.fbfb738ac9cb75c183dc1a6402e112d9.js": "/sectioncovid/precache-manifest.fbfb738ac9cb75c183dc1a6402e112d9.js",
     "service-worker.js": "/sectioncovid/service-worker.js",
-    "static/css/main.dd09f585.chunk.css.map": "/sectioncovid/static/css/main.dd09f585.chunk.css.map",
-    "static/js/2.e0225feb.chunk.js.LICENSE.txt": "/sectioncovid/static/js/2.e0225feb.chunk.js.LICENSE.txt",
+    "static/css/main.266daa42.chunk.css.map": "/sectioncovid/static/css/main.266daa42.chunk.css.map",
+    "static/js/2.97310dda.chunk.js.LICENSE.txt": "/sectioncovid/static/js/2.97310dda.chunk.js.LICENSE.txt",
+    "static/media/Dead.svg": "/sectioncovid/static/media/Dead.5bf8611d.svg",
+    "static/media/Doctor.svg": "/sectioncovid/static/media/Doctor.139ec0e5.svg",
+    "static/media/Fever.svg": "/sectioncovid/static/media/Fever.c17606dd.svg",
+    "static/media/Scroll+Gif.gif": "/sectioncovid/static/media/Scroll+Gif.f2f39ca5.gif",
+    "static/media/Strong.svg": "/sectioncovid/static/media/Strong.ed22e743.svg",
+    "static/media/hero.svg": "/sectioncovid/static/media/hero.90cb9add.svg",
     "static/media/logo.svg": "/sectioncovid/static/media/logo.5d5d9eef.svg",
     "static/media/virus icon.svg": "/sectioncovid/static/media/virus icon.3ab1e1b8.svg",
-    "static/media/App.css": "/sectioncovid/static/media/virus-bg.f9ec0d6f.svg",
+    "static/media/App.css": "/sectioncovid/static/media/wave (2).9a0c024d.svg",
     "static/media/virus-main.svg": "/sectioncovid/static/media/virus-main.cd89a91c.svg",
     "static/media/virus.svg": "/sectioncovid/static/media/virus.283be8c5.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.fe138be3.js",
-    "static/js/2.e0225feb.chunk.js",
-    "static/css/main.dd09f585.chunk.css",
-    "static/js/main.ffaef568.chunk.js"
+    "static/js/2.97310dda.chunk.js",
+    "static/css/main.266daa42.chunk.css",
+    "static/js/main.066e7494.chunk.js"
   ]
 }
