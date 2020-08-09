@@ -5,7 +5,8 @@ import virus from "./SVG/virus icon.svg"
 
 function Navbar() {
     const [ColorNav, setColorNav] = useState({color: "white ", textDecoration: "none"})
-    const href = window.location.href.split('/')[3]
+    const hrefArray = window.location.href.split('/')
+    const href = hrefArray[hrefArray.length - 1]
 
     const Page0 =()=>{
         setColorNav({color: "white ", textDecoration: "none"})

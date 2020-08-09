@@ -65,130 +65,66 @@ function Main() {
             <div className='container-fluid' style={ Style.AreaContent }>
                 <div className='row ' style={{paddingTop: "10vh", height: "82vh"}}>
                     <div className='p-5 col-4 text-center border border-success'>
-                        <img src={Hostpital} style={{height: "50vh"}}/>
+                        <img className="hospital" src={ Hostpital } />
                     </div>
 
-                    <div className='col pt-0  justify-content-center border' style={{color: "black"}}>
+                    <div className='col justify-content-center border'>
 
-                        <div className="row border border-primary" >
-                            <div className="col border border-danger" >
-                                <img src={Fever} style={{
-                                    width: "25%", 
-                                    // marginRight: "200px", 
-                                    // paddingTop: "0%", 
-                                    top:"120px", 
-                                    right:"140px", 
-                                    position: "relative"}}/>
+                        <div className="row border border-primary">
+                            <div className="col col-lg-6 col-md-12 border border-danger" >
+                                <img className="imgStatus" src={ Fever }/>
 
-                                    <div style={{ 
-                                        fontSize: "2rem",
-                                        paddingLeft: "70px"}}>INFECTED <br/> { Infected }
+                                    <div className="Status">
+                                        INFECTED <br/> { Infected }
                                     </div>
 
-                                    <div style={{
-                                        width: "90%", 
-                                        border: "5px solid black", 
-                                        borderRadius: "30px", 
-                                        paddingTop: "5%",
-                                        paddingBottom: "3%", 
-                                        paddingRight: "100px"}}>
-                                            <div style={{
-                                                fontSize: "2rem",
-                                                width: "120%",
-                                                textAlign: "left",
-                                                paddingLeft: "20%"}}>New Infected :{ NewInfected }
+                                    <div className="BorderStatus">
+                                            <div className="NewValueStatus">
+                                                New Infected :{ NewInfected }
                                             </div>
                                     </div>   
                             </div>
 
-                            <div className="col border border-secondary">
-                                <img src={ Strong } style={{
-                                    width: "25%", 
-                                    // marginRight: "200px", 
-                                    // paddingTop: "0%", 
-                                    top:"120px", 
-                                    right:"140px", 
-                                    position: "relative"}}/>
+                            <div className="col col-lg-6 col-md-12 border border-secondary">
+                                <img className="imgStatus" src={ Strong }/>
                                 
-                                    <div style={{ 
-                                            fontSize: "2rem",
-                                            paddingLeft: "70px"}}>RECOVERED <br/> { Recovered }
+                                    <div className="Status">
+                                        RECOVERED <br/> { Recovered }
                                     </div>
 
-                                    <div style={{
-                                        width: "90%", 
-                                        border: "5px solid black", 
-                                        borderRadius: "30px", 
-                                        paddingTop: "5%",
-                                        paddingBottom: "3%", 
-                                        paddingRight: "100px"}}>
-                                            <div style={{
-                                                fontSize: "2rem",
-                                                width: "120%",
-                                                textAlign: "left",
-                                                paddingLeft: "20%"}}>New Recovered :{ NewRecovered }
+                                    <div className="BorderStatus">
+                                            <div className="NewValueStatus">
+                                                New Recovered :{ NewRecovered }
                                             </div>
                                     </div>   
                             </div>
                         </div>
 
                         <div className="row border border-danger" >
-                            <div className="col border border-secondary">
-                                <img src={Doctor} style={{
-                                    width: "25%", 
-                                    // marginRight: "200px", 
-                                    // paddingTop: "0%", 
-                                    top:"120px", 
-                                    right:"140px", 
-                                    position: "relative"}}/>
+                            <div className="col col-lg-6 col-md-12 border border-secondary">
+                                <img className="imgStatus" src={ Doctor }/>
 
-                                    <div style={{ 
-                                            fontSize: "2rem",
-                                            paddingLeft: "70px"}}>HOSPITALIZED <br/> { Hospitalized }
+                                    <div className="Status">
+                                        HOSPITALIZED <br/> { Hospitalized }
                                     </div>
 
-                                    <div style={{
-                                            width: "90%", 
-                                            border: "5px solid black", 
-                                            borderRadius: "30px", 
-                                            paddingTop: "5%",
-                                            paddingBottom: "3%", 
-                                            paddingRight: "100px"}}>
-                                                <div style={{
-                                                    fontSize: "2rem",
-                                                    width: "120%",
-                                                    textAlign: "left",
-                                                    paddingLeft: "20%"}}>New Hospitalized :{ NewHospitalized }
+                                    <div className="BorderStatus">
+                                                <div className="NewValueStatus">
+                                                    New Hospitalized :{ NewHospitalized }
                                                 </div>
-                                        </div>   
+                                    </div>   
                             </div>
 
-                            <div className="col border border-secondary">
-                                <img src={Dead} style={{
-                                    width: "25%", 
-                                    // marginRight: "200px", 
-                                    // paddingTop: "0%", 
-                                    top:"120px", 
-                                    right:"140px", 
-                                    position: "relative"}}/>
+                            <div className="col col-lg-6 col-md-12 border border-secondary">
+                                <img className="imgStatus" src={ Dead }/>
 
-                                    <div style={{ 
-                                            fontSize: "2rem",
-                                            paddingLeft: "70px"}}>DEATHS <br/> { Deaths }
+                                    <div className="Status">
+                                        DEATHS <br/> { Deaths }
                                     </div>
 
-                                    <div style={{
-                                            width: "90%", 
-                                            border: "5px solid black", 
-                                            borderRadius: "30px", 
-                                            paddingTop: "5%",
-                                            paddingBottom: "3%", 
-                                            paddingRight: "100px"}}>
-                                                <div style={{
-                                                    fontSize: "2rem",
-                                                    width: "120%",
-                                                    textAlign: "left",
-                                                    paddingLeft: "20%"}}>New Deaths :{ NewDeaths }
+                                    <div className="BorderStatus">
+                                                <div className="NewValueStatus">
+                                                    New Deaths :{ NewDeaths }
                                                 </div>
                                     </div>   
                             </div>
