@@ -64,14 +64,14 @@ function Main() {
                
             <div className='container-fluid' style={ Style.AreaContent }>
                 <div className='row ' style={{paddingTop: "10vh", height: "82vh"}}>
-                    <div className='p-5 col-4 text-center border border-success'>
+                    <div className='p-5 col-4 d-none d-md-block text-center'>
                         <img className="hospital" src={ Hostpital } />
                     </div>
 
-                    <div className='col justify-content-center border'>
+                    <div className='col justify-content-center'>
 
-                        <div className="row border border-primary">
-                            <div className="col col-lg-6 col-md-12 border border-danger" >
+                        <div className="row">
+                            <div className="col col-lg-6 col-md-12 " >
                                 <img className="imgStatus" src={ Fever }/>
 
                                     <div className="Status">
@@ -85,7 +85,7 @@ function Main() {
                                     </div>   
                             </div>
 
-                            <div className="col col-lg-6 col-md-12 border border-secondary">
+                            <div className="col col-lg-6 col-md-12 ">
                                 <img className="imgStatus" src={ Strong }/>
                                 
                                     <div className="Status">
@@ -100,8 +100,8 @@ function Main() {
                             </div>
                         </div>
 
-                        <div className="row border border-danger" >
-                            <div className="col col-lg-6 col-md-12 border border-secondary">
+                        <div className="row" >
+                            <div className="col col-lg-6 col-md-12">
                                 <img className="imgStatus" src={ Doctor }/>
 
                                     <div className="Status">
@@ -115,7 +115,7 @@ function Main() {
                                     </div>   
                             </div>
 
-                            <div className="col col-lg-6 col-md-12 border border-secondary">
+                            <div className="col col-lg-6 col-md-12 ">
                                 <img className="imgStatus" src={ Dead }/>
 
                                     <div className="Status">
