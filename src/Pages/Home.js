@@ -14,7 +14,8 @@ import { Link } from 'react-router-dom';
 function Home() {
 
     const [ Data, setData ] = useState();
-    const anchors = ["firstPage", "secondPage"];
+
+    // const anchors = ["firstPage", "secondPage"];
    
     let options = {
         activeClass:          'active',
@@ -26,7 +27,7 @@ function Home() {
         // scrollBar:            true,
       };
 
-    const Getdata = async () => {
+    const GetdataToday = async () => {
         await axios.get( 'https://covid19.th-stat.com/api/open/today' )
         .then ( ( res ) => {
             const data = res.data
@@ -39,8 +40,10 @@ function Home() {
         } )
     }
 
+
     useEffect (()=>{
-        Getdata()
+        GetdataToday()
+        
     }, [])
     
     return (
@@ -93,8 +96,8 @@ function Home() {
             
             <SectionsContainer  {...options}>
                 <Section><Hommie updateDate ={ Data }/></Section>
-                <Section><Main/></Section>
-                <Section><Content/></Section>
+                <Section><Main /></Section>
+                <Section><Content /></Section>
             </SectionsContainer>
             <Navbar/>
             

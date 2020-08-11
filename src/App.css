@@ -39,14 +39,7 @@
   }
 }
 
-/* a{
-  color: white !important;
-}
-
-a:hover{
-  color: white;
-  text-decoration: none;
-} */
+/*---------------------------*/
 
 .navbar {
   position: fixed;
@@ -96,23 +89,16 @@ a:hover{
 
 .main {
   height: 100vh;
-  
-  /* background: linear-gradient(
-    180deg, 
-    rgba(0,0,0,0.85) 7%, 
-    rgba(255,255,255,1) 20%, 
-    rgba(255,255,255,1) 80%); */
-    
 }
-
 .ex1.active{
   border-bottom: 3px solid white !important;
-  
 }
 
 .content {
   height: 100vh;
-  background-color: white;
+}
+.ex2.active{
+  border-bottom: 3px solid rgba(0,0,0,0.85) !important;
 }
 
 .content2 {
@@ -189,7 +175,7 @@ a:hover{
     width: 25%;
     /* margin-right: 200px;
     padding-top: 0%; */
-    top: 0px;
+    top: 15px;
     right: 100px;
     position: relative;
   }
@@ -197,7 +183,7 @@ a:hover{
     font-size: 1rem;
     font-weight: bold;
     padding-left: 50px;
-    margin-top: -65px;
+    margin-top: -50px;
   }
   .BorderStatus{
     width: 80%;
@@ -477,6 +463,13 @@ a:hover{
   background-position: 0% -7%;
   background-size: 100% ;
   }
+
+  .content{
+    background-image:url("./Components/SVG/Background/wave (4).svg");
+    background-repeat: no-repeat;
+    background-position: 0% 120%;
+    background-size: 100% ;
+    }
 
   .Textcovid{
     font-size:10rem;

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link, animateScroll as scroll } from "react-scroll";
 import virus from "./SVG/virus icon.svg"
 
@@ -14,12 +14,18 @@ function Navbar() {
     const Page1 =()=>{
         setColorNav({color: "white", textDecoration: "none"})
     }
+    const Page2 =()=>{
+        setColorNav({color: "rgba(0,0,0,0.85)", textDecoration: "none"})
+    }
     const checkhref =()=>{
         if (href == '#sectionOne') {
             Page0()
         }
         else if (href == '#sectionTwo'){
             Page1()
+        }
+        else if (href == '#sectionThree'){
+            Page2()
         }
     }
     useEffect(() => {
@@ -74,6 +80,7 @@ function Navbar() {
                     </li>
                     <li className="nav-item">
                         <a
+                            className="ex2"
                             activeClass="active"
                             href="#sectionThree"
                             spy={true}

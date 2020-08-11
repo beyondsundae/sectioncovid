@@ -10,15 +10,13 @@ import Dead from '../Components/SVG/Dead.svg'
 
 
 
-function Main() {
+const Main = () => {
     const Style = ({ 
-        PaddingTop:{ 
+        PaddingForMenu:{ 
             height: "5vh",
-            
         },
-        AreaContent:{
+        AreaHeightContent:{
             height: "92vh",
-            // border:"5px solid red"
         }
     })
     
@@ -38,7 +36,7 @@ function Main() {
         await axios.get( 'https://covid19.th-stat.com/api/open/today' )
         .then ( (res) =>{
             const Result = res.data
-            console.table( Result )
+            // console.table( Result )
             setInfected( Result.Confirmed )
             setNewInfected( Result.NewConfirmed )
             setRecovered( Result.Recovered )
@@ -54,15 +52,15 @@ function Main() {
     }
 
 
-    useEffect(()=>{
+    useEffect(() => {
         GetDataCovid()
     }, [])
 
     return (
         <div className='main' id='main' >
-            <div className='container-fluid' style={ Style.PaddingTop }/>
+            <div className='container-fluid' style={ Style.PaddingForMenu }/>
                
-            <div className='container-fluid' style={ Style.AreaContent }>
+            <div className='container-fluid ' style={ Style.AreaHeightContent }>
                 <div className='row ' style={{paddingTop: "10vh", height: "82vh"}}>
                     <div className='p-5 col-4 d-none d-md-block text-center'>
                         <img className="hospital" src={ Hostpital } />

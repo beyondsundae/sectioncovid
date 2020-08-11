@@ -4,15 +4,14 @@ import virusMain from "./SVG/virus-main.svg"
 import Scrolldown from "./GIF/Scroll+Gif.gif"
 import zIndex from '@material-ui/core/styles/zIndex'
 
-function Hommie( props ) {
+const Hommie = ( props ) => {
     const Style =({
-        
-
-        Paddingtop:{
-            height: "5vh"
+        PaddingForMenu:{
+            height: "5vh",
+            // border:"5px solid red"
         },
         
-        AreaContent:{
+        AreaHeightContent:{
             height: "82vh",
         },
 
@@ -27,9 +26,9 @@ function Hommie( props ) {
     // border border-danger"
     return (
         <div className="hommie" id="hommie" >
-            <div className="container-fluid" style={ Style.Paddingtop }/>
+            <div className="container-fluid" style={ Style.PaddingForMenu }/>
 
-            <div className='container-fluid' style={ Style.AreaContent }>
+            <div className='container-fluid' style={ Style.AreaHeightContent }>
                 <div className="row mt-5" style={{paddingTop: "13vh"}}>
                     {/* <div className="row border border-danger"> */}
                     <div className="col-1 text-left ">
@@ -51,7 +50,7 @@ function Hommie( props ) {
 
                 <div className="ScrollMouse row justify-content-center" >
                     <img 
-                        src={Scrolldown}
+                        src={ Scrolldown }
                         style={{height: "100px"}}>
 
                     </img>
