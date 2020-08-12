@@ -8,9 +8,8 @@ import CoughF from './SVG/coughingF.svg'
 import MaskF from './SVG/wearing_a_mask_F.svg'
 import MaskM from './SVG/wearing_a_mask_M.svg'
 
-    const Content = () => {
+const Content = () => {
     const [ Gender, setGender ] = useState([]);
-    const [ Provinces, setProvinces ] = useState([]);
 
     const Style = ({ 
         PaddingForMenu:{ 
@@ -29,7 +28,7 @@ import MaskM from './SVG/wearing_a_mask_M.svg'
         }
     })
 
-    const GetGenderandProvinces = async () => {
+    const GetGender = async () => {
         await axios.get( 'https://covid19.th-stat.com/api/open/cases/sum' )
         .then ( ( res ) => {
             const data = res.data
@@ -72,7 +71,7 @@ import MaskM from './SVG/wearing_a_mask_M.svg'
 
 
     useEffect (() => {
-        GetGenderandProvinces()
+        GetGender()
     }, []) 
 
     useEffect(() => {
@@ -95,7 +94,7 @@ import MaskM from './SVG/wearing_a_mask_M.svg'
                                 </div>
                             </div>
 
-                            <div className="col col-lg-6 col-md-10">
+                            <div className="col col-lg-6 col-md-10 ">
                                 <img src={Cough}/>
                                 <div style={ Style.FontGender }>Male <div style={ Style.FontAmount }>{Gender.Male}</div></div>
                             </div>
@@ -107,7 +106,7 @@ import MaskM from './SVG/wearing_a_mask_M.svg'
                         </div>
                     </div>
 
-                    <div className="col ">
+                    <div className="col order-sm-last order-first">
                         { PieGender() }
                     </div>
                 </div>

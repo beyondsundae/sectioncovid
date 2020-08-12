@@ -26,7 +26,7 @@ function Navbar() {
             NavBlack()
         }
         else if (href == '#sectionFour'){
-            NavBlack()
+            NavWhite()
         }
     }
     
@@ -64,7 +64,7 @@ function Navbar() {
                             duration= {500}
                             isDynamic={true}
                             style={ColorNav}
-                        >Hommie</a>
+                        >Home</a>
                     </li>
                     <li className="nav-item">
                         <a
@@ -77,7 +77,7 @@ function Navbar() {
                             duration= {500}
                             isDynamic={true}
                             style={ColorNav}
-                        >Main</a>
+                        >Situation</a>
                     </li>
                     <li className="nav-item">
                         <a
@@ -101,7 +101,7 @@ function Navbar() {
                             offset={0}
                             duration= {500}
                             style={ColorNav}
-                        >Content2</a>
+                        >Chart</a>
                     </li>
                     
                     {/* <li className="btn btn-primary" onClick={()=>{scroll.scrollToTop()}}>to top</li> */}
