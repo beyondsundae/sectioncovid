@@ -20,7 +20,7 @@ function Home() {
     let options = {
         activeClass:          'active',
         sectionClassName:     'section',
-        anchors:              ['sectionOne', 'sectionTwo', 'sectionThree'],
+        anchors:              ['sectionOne', 'sectionTwo', 'sectionThree', 'sectionFour'],
         delay:                500,
         navigation:           true,
         verticalAlign:        false,
@@ -98,6 +98,7 @@ function Home() {
                 <Section><Hommie updateDate ={ Data }/></Section>
                 <Section><Main /></Section>
                 <Section><Content /></Section>
+                <Section><Content2 /></Section>
             </SectionsContainer>
             <Navbar/>
             

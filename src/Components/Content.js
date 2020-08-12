@@ -4,6 +4,7 @@ import { PieChart, Pie, ResponsiveContainer,
     ComposedChart, Area, CartesianGrid, Bar, XAxis, 
     YAxis, Tooltip, Legend, Cell, LineChart, Line } from 'recharts';
 import Cough from './SVG/coughing.svg'
+import CoughF from './SVG/coughingF.svg'
 import MaskF from './SVG/wearing_a_mask_F.svg'
 import MaskM from './SVG/wearing_a_mask_M.svg'
 
@@ -17,6 +18,14 @@ import MaskM from './SVG/wearing_a_mask_M.svg'
         },
         AreaHeightContent:{
             height: "82vh",
+        },
+        FontGender:{
+            fontSize: "2rem", 
+            fontWeight: "bold"
+        },
+        FontAmount:{
+            fontSize: "2.8rem",
+            fontWeight: "bold"
         }
     })
 
@@ -30,6 +39,7 @@ import MaskM from './SVG/wearing_a_mask_M.svg'
 
         .catch ( (err) => {
             console.log( err.message )
+            alert("API Status: "+err.message)
         } )
     }
 
@@ -77,15 +87,29 @@ import MaskM from './SVG/wearing_a_mask_M.svg'
 
             <div className=" container-fluid " style={ Style.AreaHeightContent }>
                 <div className="row justify-content-center " style={{paddingTop: "10vh", height: "82vh"}}>
-                    <div className="col col-3 ">
-                        <img src={Cough}/>
+                    <div className="col ">
+                        <div className="row  ">
+                            <div className="col col-12 col-lg-12  py-5 d-none d-md-block">
+                                <div style={ Style.FontAmount }>
+                                    Gender and COVID-19
+                                </div>
+                            </div>
+
+                            <div className="col col-lg-6 col-md-10">
+                                <img src={Cough}/>
+                                <div style={ Style.FontGender }>Male <div style={ Style.FontAmount }>{Gender.Male}</div></div>
+                            </div>
+                            
+                            <div className="col col-lg-6 col-md-10">
+                                <img src={CoughF}/>
+                                <div style={ Style.FontGender }>Female <div style={ Style.FontAmount }>{Gender.Female}</div></div>
+                            </div>
+                        </div>
                     </div>
-                    <div className="col col-6 ">
+
+                    <div className="col ">
                         { PieGender() }
                     </div>
-                    {/* <div className="col col-3 ">
-                        <img src={MaskF}/>
-                    </div> */}
                 </div>
             </div>
             

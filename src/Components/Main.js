@@ -47,7 +47,8 @@ const Main = () => {
             setNewDeaths( Result.NewDeaths )
         })
         .catch ( (err) =>{
-            console.log( err.message) 
+            console.log( err.message ) 
+            
         } )
     }
 

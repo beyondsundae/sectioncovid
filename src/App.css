@@ -105,7 +105,9 @@
   height: 100vh;
   background-color: white;
 }
-
+.ex3.active{
+  border-bottom: 3px solid rgba(0,0,0,0.85) !important;
+}
 
 /* Extra small devices (phones, 600px and down) Mobile */
 @media only screen and (max-width: 600px) {
@@ -118,7 +120,6 @@
     background-position: right 75%;
     background-size: 70%;
   }
-
   .main{
     background-image:url("./Components/SVG/Background/wave (1).svg");
     transition:background-image 1s ease-in-out;
@@ -126,7 +127,14 @@
     background-position: top;
     background-size: 320%;
     /* border: 1px solid mediumpurple; */
-    }
+  }
+  .content{
+    background-image:url("./Components/SVG/Background/wave (4).svg");
+    background-repeat: no-repeat;
+    background-position: 0% 120%;
+    background-size: 100% ; 
+    
+  }
 
   .navbar {
     position: fixed;
@@ -214,7 +222,6 @@
     background-position: right;
     background-size: 50%;
   }
-
   .main{
     background-image:url("./Components/SVG/Background/wave (1).svg");
     transition:background-image 1s ease-in-out;
@@ -283,7 +290,6 @@
     background-size: 70%;
     
   }
-
   .main{
     background-image:url("./Components/SVG/Background/wave (2).svg");
     transition:background-image 1s ease-in-out;
@@ -291,6 +297,13 @@
     background-position: top;
     background-size: 100%;
     /* border: 1px solid green; */
+    }
+  .content{
+    background-image:url("./Components/SVG/Background/wave (4).svg");
+    background-repeat: no-repeat;
+    background-position: 0% 120%;
+    background-size: 100% ; 
+    
     }
 
   .Textcovid{
@@ -361,7 +374,6 @@
     background-position: right;
     background-size: 50%;
   }
-
   .main{
     background-image:url("./Components/SVG/Background/wave (0).svg");
     transition:background-image 1s ease-in-out;
@@ -369,6 +381,13 @@
     background-position: top;
     background-size: 110%;
     /* border: 1px solid orange; */
+    }
+  .content{
+    background-image:url("./Components/SVG/Background/wave (4).svg");
+    background-repeat: no-repeat;
+    background-position: 0% 100%;
+    background-size: 100% ; 
+    
     }
 
   .Textcovid{
@@ -456,20 +475,19 @@
     background-position: right;
     background-size: 70% ;
   }
-
   .main{
   background-image:url("./Components/SVG/Background/wave (0).svg");
   background-repeat: no-repeat;
   background-position: 0% -7%;
   background-size: 100% ;
   }
-
-  .content{
-    background-image:url("./Components/SVG/Background/wave (4).svg");
-    background-repeat: no-repeat;
-    background-position: 0% 120%;
-    background-size: 100% ;
-    }
+.content{
+  background-image:url("./Components/SVG/Background/wave (4).svg");
+  background-repeat: no-repeat;
+  background-position: 0% 120%;
+  background-size: 100% ; 
+  
+  }
 
   .Textcovid{
     font-size:10rem;
@@ -526,7 +544,7 @@
   }
   .BorderStatus{
     width: 80%;
-    border: 5px solid rgba(0,0,0,0.5);
+    border: 5px solid rgba(0,0,0,0.85);
     border-radius: 30px;
     padding-top: 5%;
     padding-bottom: 3%;

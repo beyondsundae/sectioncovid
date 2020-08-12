@@ -8,30 +8,33 @@ function Navbar() {
     const hrefArray = window.location.href.split('/')
     const href = hrefArray[hrefArray.length - 1]
 
-    const Page0 =()=>{
+    const NavWhite =()=>{
         setColorNav({color: "white ", textDecoration: "none"})
     }
-    const Page1 =()=>{
-        setColorNav({color: "white", textDecoration: "none"})
-    }
-    const Page2 =()=>{
+    const NavBlack =()=>{
         setColorNav({color: "rgba(0,0,0,0.85)", textDecoration: "none"})
     }
+
     const checkhref =()=>{
         if (href == '#sectionOne') {
-            Page0()
+            NavWhite()
         }
         else if (href == '#sectionTwo'){
-            Page1()
+            NavWhite()
         }
         else if (href == '#sectionThree'){
-            Page2()
+            NavBlack()
+        }
+        else if (href == '#sectionFour'){
+            NavBlack()
         }
     }
+    
     useEffect(() => {
         console.log(href)
         checkhref()
     },[href])
+
     return (
         <div className="all" >
             
@@ -61,7 +64,6 @@ function Navbar() {
                             duration= {500}
                             isDynamic={true}
                             style={ColorNav}
-                            onClick={Page0}
                         >Hommie</a>
                     </li>
                     <li className="nav-item">
@@ -75,7 +77,6 @@ function Navbar() {
                             duration= {500}
                             isDynamic={true}
                             style={ColorNav}
-                            onClick={Page1}
                         >Main</a>
                     </li>
                     <li className="nav-item">
@@ -88,10 +89,11 @@ function Navbar() {
                             offset={0}
                             duration= {500}
                             style={ColorNav}
-                        >Content</a>
+                        >Gender</a>
                     </li>
                     <li className="nav-item">
-                        <Link
+                        <a
+                            className="ex3"
                             activeClass="active"
                             href="#sectionFour"
                             spy={true}
@@ -99,7 +101,7 @@ function Navbar() {
                             offset={0}
                             duration= {500}
                             style={ColorNav}
-                        >Content2</Link>
+                        >Content2</a>
                     </li>
                     
                     {/* <li className="btn btn-primary" onClick={()=>{scroll.scrollToTop()}}>to top</li> */}
