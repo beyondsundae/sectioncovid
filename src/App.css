@@ -59,7 +59,7 @@
 
 .navbar ul li {
   color: white;
-  margin-left: 10%;
+  margin-left: 5%;
   display: inline;
   cursor: pointer;
   
@@ -68,7 +68,7 @@
 
 .navbar ul li > .active{
   border-bottom: 3px solid white;
-  transition:all 0.7s ease-in-out;
+  transition:all 0.5s ease-in-out;
   /* border-radius: 10%; */
   /* background-color: white; */
   /* border:2px solid white; */
@@ -76,11 +76,6 @@
   font-size: 3vh;
 }
 
-
-/* .test>a.active{
-  border-bottom: 3px solid red;
-  font-size: 3vh;
-} */
 
 .hommie {
   height: 100vh;
@@ -109,6 +104,14 @@
   border-bottom: 3px solid white !important;
 }
 
+.content3 {
+  height: 100vh;
+  background-color: white;
+}
+.ex4.active{
+  border-bottom: 3px solid rgba(0,0,0,0.85) !important;
+}
+
 /* Extra small devices (phones, 600px and down) Mobile */
 @media only screen and (max-width: 600px) {
 
@@ -131,7 +134,7 @@
   .content{
     background-image:url("./Components/SVG/Background/wave (4).svg");
     background-repeat: no-repeat;
-    background-position: 0% 120%;
+    background-position: 0% 100%;
     background-size: 100% ; 
   }
   .content2{
@@ -166,6 +169,8 @@
     padding-bottom:5px;
     font-size: 1.7vh;
   }
+
+    /* First Page */
 
   .Textcovid{
     font-size:4rem;
@@ -213,6 +218,12 @@
     text-align: left;
     padding-left: 20%;
     
+  }
+   
+  /* Fifth Page */
+
+  .ThPic{
+    height: 15vh;
   }
 }
 
@@ -306,7 +317,7 @@
   .content{
     background-image:url("./Components/SVG/Background/wave (4).svg");
     background-repeat: no-repeat;
-    background-position: 0% 120%;
+    background-position: 0% 100%;
     background-size: 100% ; 
     }
   .content2{
@@ -314,6 +325,12 @@
     background-repeat: no-repeat;
     background-position: 0% 0%;
     background-size: 120% ; 
+  }
+  .content3{
+    background-image:url("./Components/SVG/Background/wave (9).svg");
+    background-repeat: no-repeat;
+    background-position: 0% 120%;
+    background-size: 100% ; 
   }
 
   .Textcovid{
@@ -375,6 +392,12 @@
   /* Forth Page */
 
   .DocPic{
+    height: 30vh;
+  }
+ 
+  /* Fifth Page */
+
+  .ThPic{
     height: 30vh;
   }
 }
@@ -470,6 +493,12 @@
   .DocPic{
     height: 40vh;
   }
+   
+  /* Fifth Page */
+
+  .ThPic{
+    height: 50vh;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -518,6 +547,12 @@
     background-image:url("./Components/SVG/Background/wave (6).svg");
     background-repeat: no-repeat;
     background-position: 0% -12%;
+    background-size: 100% ; 
+  }
+  .content3{
+    background-image:url("./Components/SVG/Background/wave (9).svg");
+    background-repeat: no-repeat;
+    background-position: 0% 120%;
     background-size: 100% ; 
   }
 
@@ -594,6 +629,12 @@
 
   .DocPic{
     height: 50vh;
+  }
+   
+  /* Fifth Page */
+
+  .ThPic{
+    height: 80vh;
   }
 }
 

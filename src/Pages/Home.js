@@ -8,6 +8,7 @@ import Navbar from '../Components/Navbar';
 import Main from '../Components/Main';
 import Content from '../Components/Content'
 import Content2 from '../Components/Content2'
+import Content3 from '../Components/Content3'
 import Hommie from '../Components/Hommie';
 import { Link } from 'react-router-dom';
 
@@ -20,7 +21,11 @@ function Home() {
     let options = {
         activeClass:          'active',
         sectionClassName:     'section',
-        anchors:              ['sectionOne', 'sectionTwo', 'sectionThree', 'sectionFour'],
+        anchors:              ['sectionOne',
+                                'sectionTwo', 
+                                'sectionThree', 
+                                'sectionFour',
+                                'sectionFive'],
         delay:                500,
         navigation:           true,
         verticalAlign:        false,
@@ -99,6 +104,7 @@ function Home() {
                 <Section><Main /></Section>
                 <Section><Content /></Section>
                 <Section><Content2 /></Section>
+                <Section><Content3 /></Section>
             </SectionsContainer>
             <Navbar/>
             
