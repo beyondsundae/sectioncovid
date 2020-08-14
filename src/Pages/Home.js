@@ -9,6 +9,7 @@ import Main from '../Components/Main';
 import Content from '../Components/Content'
 import Content2 from '../Components/Content2'
 import Content3 from '../Components/Content3'
+import Content4 from '../Components/Content4'
 import Hommie from '../Components/Hommie';
 import { Link } from 'react-router-dom';
 
@@ -25,7 +26,8 @@ function Home() {
                                 'sectionTwo', 
                                 'sectionThree', 
                                 'sectionFour',
-                                'sectionFive'],
+                                'sectionFive',
+                                'sectionSix',],
         delay:                500,
         navigation:           true,
         verticalAlign:        false,
@@ -105,6 +107,7 @@ function Home() {
                 <Section><Content /></Section>
                 <Section><Content2 /></Section>
                 <Section><Content3 /></Section>
+                <Section><Content4 /></Section>
             </SectionsContainer>
             <Navbar/>
             

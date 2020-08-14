@@ -112,6 +112,13 @@
   border-bottom: 3px solid rgba(0,0,0,0.85) !important;
 }
 
+.content4 {
+  height: 100vh;
+  background-color: white;
+}
+
+/* Responsive */
+
 /* Extra small devices (phones, 600px and down) Mobile */
 @media only screen and (max-width: 600px) {
 
@@ -142,6 +149,18 @@
     background-repeat: no-repeat;
     background-position: 0% 0%;
     background-size: 150% ; 
+  }
+  .content3{
+    background-image:url("./Components/SVG/Background/wave (9).svg");
+    background-repeat: no-repeat;
+    background-position: 0% 100%;
+    background-size: 100% ; 
+  }
+  .content4{
+    background-image:url("./Components/SVG/Background/wave (2).svg"),url("./Components/SVG/Background/wave (9).svg");
+    background-repeat: no-repeat;
+    background-position: 0% 0%, 0% 100%;
+    background-size: 125%, 100% ; 
   }
 
   .navbar {
@@ -224,6 +243,12 @@
 
   .ThPic{
     height: 15vh;
+  }
+  
+  /* Sixth Page */
+
+  .IconSafe{
+    height: 20vh;
   }
 }
 
@@ -329,8 +354,14 @@
   .content3{
     background-image:url("./Components/SVG/Background/wave (9).svg");
     background-repeat: no-repeat;
-    background-position: 0% 120%;
+    background-position: 0% 100%;
     background-size: 100% ; 
+  }
+  .content4{
+    background-image:url("./Components/SVG/Background/wave (2).svg"),url("./Components/SVG/Background/wave (9).svg");
+    background-repeat: no-repeat;
+    background-position: 0% 0%, 0% 100%;
+    background-size: 100%, 100% ; 
   }
 
   .Textcovid{
@@ -432,6 +463,18 @@
     background-repeat: no-repeat;
     background-position: 0% 0%;
     background-size: 100% ; 
+  }
+  .content3{
+    background-image:url("./Components/SVG/Background/wave (9).svg");
+    background-repeat: no-repeat;
+    background-position: 0% 105%;
+    background-size: 100% ; 
+  }
+  .content4{
+    background-image:url("./Components/SVG/Background/wave (2).svg"),url("./Components/SVG/Background/wave (9).svg");
+    background-repeat: no-repeat;
+    background-position: 0% -15%, 0% 110%;
+    background-size: 100%, 100% ; 
   }
 
   .Textcovid{
@@ -555,6 +598,12 @@
     background-position: 0% 120%;
     background-size: 100% ; 
   }
+  .content4{
+    background-image:url("./Components/SVG/Background/wave (2).svg"),url("./Components/SVG/Background/wave (9).svg");
+    background-repeat: no-repeat;
+    background-position: 0% -35%, 0% 130%;
+    background-size: 100%, 100% ; 
+  }
 
   .Textcovid{
     font-size:10rem;
@@ -635,6 +684,12 @@
 
   .ThPic{
     height: 80vh;
+  }
+    
+  /* Sixth Page */
+
+  .IconSafe{
+    height: 40vh;
   }
 }
 

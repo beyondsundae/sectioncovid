@@ -42,6 +42,9 @@ function Navbar() {
         else if (href == '#sectionFive'){
             NavBlack()
         }
+        else if (href == '#sectionSix'){
+            NavWhite()
+        }
     }
     
     useEffect(() => {
