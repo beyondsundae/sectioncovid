@@ -11,10 +11,7 @@ function App() {
     <div className="App">
       <Switch>
           <Route exact path="/" component={Home} />
-          {/* <Route exact path="/HomeLong" component={HomeLong} />
-          <Route exact path="/NewCase" component={NewCase} />
-          <Route exact path="/About" component={About} />
-          <Route component={NotFoundPage} /> */}
+          <Route component={Home} />
         </Switch>
     </div>
   );

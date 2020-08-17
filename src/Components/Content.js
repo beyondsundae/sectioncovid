@@ -1,12 +1,8 @@
 import React,{ useEffect, useState } from 'react'
 import axios from 'axios'
-import { PieChart, Pie, ResponsiveContainer, 
-    ComposedChart, Area, CartesianGrid, Bar, XAxis, 
-    YAxis, Tooltip, Legend, Cell, LineChart, Line } from 'recharts';
+import { PieChart, Pie, ResponsiveContainer, Tooltip, Legend, Cell } from 'recharts';
 import Cough from './SVG/coughing.svg'
 import CoughF from './SVG/coughingF.svg'
-import MaskF from './SVG/wearing_a_mask_F.svg'
-import MaskM from './SVG/wearing_a_mask_M.svg'
 
 const Content = () => {
     const [ Gender, setGender ] = useState([]);
@@ -69,7 +65,6 @@ const Content = () => {
         )
     }
 
-
     useEffect (() => {
         GetGender()
     }, []) 
@@ -77,8 +72,6 @@ const Content = () => {
     useEffect(() => {
         console.log(Gender)
     },[Gender])
-
-    
 
     return (
         <div className='content' id='content'>

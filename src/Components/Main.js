@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import Container from '@material-ui/core/Container';
 import Hostpital from '../Components/SVG/hero.svg'
 
 import Fever from '../Components/SVG/Fever.svg'
@@ -28,9 +27,6 @@ const Main = () => {
     const [ Hospitalized, setHospitalized ] = useState()
     const [ Deaths, setDeaths ] = useState()
     const [ NewDeaths, setNewDeaths ] = useState()
-    const [ UpdateDate, setUpdateDate] = useState()
-  
-
 
     const GetDataCovid = async ()=>{
         await axios.get( 'https://covid19.th-stat.com/api/open/today' )
@@ -48,10 +44,8 @@ const Main = () => {
         })
         .catch ( (err) =>{
             console.log( err.message ) 
-            
         } )
-    }
-
+    }//Beyondsundae
 
     useEffect(() => {
         GetDataCovid()
@@ -63,7 +57,7 @@ const Main = () => {
                
             <div className='container-fluid ' style={ Style.AreaHeightContent }>
                 <div className='row ' style={{paddingTop: "10vh", height: "82vh"}}>
-                    <div className='p-5 col-4 d-none d-md-block text-center'>
+                    <div className='p-5 col-4 d-none d-md-block text-center' >
                         <img className="hospital" src={ Hostpital } />
                     </div>
 
@@ -71,9 +65,9 @@ const Main = () => {
 
                         <div className="row">
                             <div className="col col-lg-6 col-md-12 " >
-                                <img className="imgStatus" src={ Fever }/>
+                                <img className="imgStatus" src={ Fever } />
 
-                                    <div className="Status">
+                                    <div className="Status"  >
                                         INFECTED <br/> { Infected }
                                     </div>
 

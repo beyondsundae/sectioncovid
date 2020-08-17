@@ -1,8 +1,5 @@
 import React from 'react'
-import virus from "./SVG/virus.svg"
-import virusMain from "./SVG/virus-main.svg"
 import Scrolldown from "./GIF/Scroll+Gif.gif"
-import zIndex from '@material-ui/core/styles/zIndex'
 
 const Hommie = ( props ) => {
     const Style =({
@@ -38,7 +35,7 @@ const Hommie = ( props ) => {
 
                     <div className="VerticalLine"/>
 
-                    <div className="col">
+                    <div className="col" >
                         <div className="pt-5" style={{color:'white'}}>
                             <div className="Textcovid" style={{textAlign: "left"}}>Covid-19</div>
                             <div className="TextSituation" style={{textAlign: "left"}}>Thailand Situation</div>

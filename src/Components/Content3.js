@@ -9,18 +9,6 @@ import TableIcons from './Parts/TableIcons'
 const Content3 = () => {
     const [ Province, setProvince ] = useState([])
 
-    const [page, setPage] = React.useState(0);
-    const [rowsPerPage, setRowsPerPage] = React.useState(10);
-
-    const handleChangePage = (event, newPage) => {
-        setPage(newPage);
-    };
-
-    const handleChangeRowsPerPage = event => {
-        setRowsPerPage(+event.target.value);
-        setPage(0);
-    };
-
     const Style = ({ 
         PaddingForMenu:{ 
             height: "10vh",
@@ -103,11 +91,11 @@ const Content3 = () => {
 
                         <div className="col col-md-12 col-lg-6 pt-5 ">
                             <MaterialTable
-                                title="Amount of infecters"
+                                title="Cases by province"
                                 icons={TableIcons}
                                 columns={[
-                                    {title: 'Name', field: 'name'},
-                                    {title: 'Amount', field: 'amount'}
+                                    {title: 'Province', field: 'name'},
+                                    {title: 'Case', field: 'amount'}
                                 ]}
                                 data={
                                     dataProvince.rows
@@ -121,7 +109,6 @@ const Content3 = () => {
                                         borderRadius: '2%',
                                         color: '#FFF'
                                         },
-                                    
                                     }}
                                 />
 

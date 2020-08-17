@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { Link, animateScroll as scroll } from "react-scroll";
 import virusW from "./SVG/virus iconW.svg"
 import virusB from "./SVG/virus iconB.svg"
 
@@ -68,8 +67,8 @@ function Navbar() {
                     </a>
                 </ul>
 
-                <ul className="nav-items d-none d-md-inline d-xs-none " >
-                    <li className="nav-item">
+                <ul className="nav-items mb-5 d-none d-md-inline d-xs-none " >
+                    <li className="nav-item ">
                         <a
                             className="ex0"
                             activeClass="active"
