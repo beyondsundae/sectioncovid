@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/sectioncovid/static/css/main.89ffa363.chunk.css",
-    "main.js": "/sectioncovid/static/js/main.a5406d6a.chunk.js",
-    "main.js.map": "/sectioncovid/static/js/main.a5406d6a.chunk.js.map",
+    "main.css": "/sectioncovid/static/css/main.c82fe105.chunk.css",
+    "main.js": "/sectioncovid/static/js/main.6ee21325.chunk.js",
+    "main.js.map": "/sectioncovid/static/js/main.6ee21325.chunk.js.map",
     "runtime-main.js": "/sectioncovid/static/js/runtime-main.fe138be3.js",
     "runtime-main.js.map": "/sectioncovid/static/js/runtime-main.fe138be3.js.map",
-    "static/js/2.d2a1553b.chunk.js": "/sectioncovid/static/js/2.d2a1553b.chunk.js",
-    "static/js/2.d2a1553b.chunk.js.map": "/sectioncovid/static/js/2.d2a1553b.chunk.js.map",
+    "static/js/2.35836f6d.chunk.js": "/sectioncovid/static/js/2.35836f6d.chunk.js",
+    "static/js/2.35836f6d.chunk.js.map": "/sectioncovid/static/js/2.35836f6d.chunk.js.map",
     "index.html": "/sectioncovid/index.html",
-    "precache-manifest.e11d6c3691238b423188feee1b51fe90.js": "/sectioncovid/precache-manifest.e11d6c3691238b423188feee1b51fe90.js",
+    "precache-manifest.f2ee9417f88daa35afa60ea490fa2c13.js": "/sectioncovid/precache-manifest.f2ee9417f88daa35afa60ea490fa2c13.js",
     "service-worker.js": "/sectioncovid/service-worker.js",
-    "static/css/main.89ffa363.chunk.css.map": "/sectioncovid/static/css/main.89ffa363.chunk.css.map",
-    "static/js/2.d2a1553b.chunk.js.LICENSE.txt": "/sectioncovid/static/js/2.d2a1553b.chunk.js.LICENSE.txt",
+    "static/css/main.c82fe105.chunk.css.map": "/sectioncovid/static/css/main.c82fe105.chunk.css.map",
+    "static/js/2.35836f6d.chunk.js.LICENSE.txt": "/sectioncovid/static/js/2.35836f6d.chunk.js.LICENSE.txt",
     "static/media/Dead.svg": "/sectioncovid/static/media/Dead.69343d20.svg",
     "static/media/Doctor.svg": "/sectioncovid/static/media/Doctor.2f92f23c.svg",
     "static/media/Fever.svg": "/sectioncovid/static/media/Fever.d4e35ff8.svg",
@@ -22,21 +22,21 @@
     "static/media/TH_flatline.svg": "/sectioncovid/static/media/TH_flatline.e4f20bf4.svg",
     "static/media/coughing.svg": "/sectioncovid/static/media/coughing.92300434.svg",
     "static/media/coughingF.svg": "/sectioncovid/static/media/coughingF.fefc27fc.svg",
-    "static/media/doctor_flatline(2).svg": "/sectioncovid/static/media/doctor_flatline(2).da6695a8.svg",
-    "static/media/health__flatline.svg": "/sectioncovid/static/media/health__flatline.e5bee6fd.svg",
+    "static/media/doctor_flatline(2).svg": "/sectioncovid/static/media/doctor_flatline(2).08c5bd8d.svg",
+    "static/media/health__flatline.svg": "/sectioncovid/static/media/health__flatline.1d78baeb.svg",
     "static/media/hero.svg": "/sectioncovid/static/media/hero.90cb9add.svg",
     "static/media/logo.svg": "/sectioncovid/static/media/logo.5d5d9eef.svg",
-    "static/media/soap_flatline.svg": "/sectioncovid/static/media/soap_flatline.330ca328.svg",
+    "static/media/soap_flatline.svg": "/sectioncovid/static/media/soap_flatline.b0c2d321.svg",
     "static/media/virus iconB.svg": "/sectioncovid/static/media/virus iconB.3994f15e.svg",
     "static/media/virus iconW.svg": "/sectioncovid/static/media/virus iconW.3ab1e1b8.svg",
     "static/media/App.css": "/sectioncovid/static/media/wave (9).b2c4a9f7.svg",
-    "static/media/washing_hands_flatline (1).svg": "/sectioncovid/static/media/washing_hands_flatline (1).f858b8bc.svg",
-    "static/media/wearing_a_mask__flatline copy.svg": "/sectioncovid/static/media/wearing_a_mask__flatline copy.7253e70e.svg"
+    "static/media/washing_hands_flatline (1).svg": "/sectioncovid/static/media/washing_hands_flatline (1).c1643ca5.svg",
+    "static/media/wearing_a_mask__flatline copy.svg": "/sectioncovid/static/media/wearing_a_mask__flatline copy.c62775db.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.fe138be3.js",
-    "static/js/2.d2a1553b.chunk.js",
-    "static/css/main.89ffa363.chunk.css",
-    "static/js/main.a5406d6a.chunk.js"
+    "static/js/2.35836f6d.chunk.js",
+    "static/css/main.c82fe105.chunk.css",
+    "static/js/main.6ee21325.chunk.js"
   ]
 }
