@@ -10,8 +10,8 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .logoS{
+    animation: App-logo-spin infinite 5s linear;
   }
 }
 
@@ -39,9 +39,63 @@
   }
 }
 
+
+
 /*---------------------------*/
 
+@media (prefers-reduced-motion: no-preference) {
+  .logoS{
+    animation: Spinner infinite 5s linear;
+  }
+}
 
+@keyframes Spinner {
+  from { transform: rotate(0deg) } to { transform: rotate(360deg) }
+}
+@keyframes Fade{
+  from { opacity: 0.1 } to { opacity: 1 }
+}
+@keyframes Moving{
+  from { bottom: 200px } to { bottom: 0px }
+}
+@keyframes MovingLeft{ 
+  from { left: 200px } to { left: 0px }
+}
+@keyframes MovingRight{
+  from { right: 200px } to { right: 0px }
+}
+@keyframes MovingFlag{
+  from { bottom: 600px } to { bottom: 0px }
+}
+@keyframes MovingBott{
+  from { bottom: 200px } to { bottom: 0px }
+}
+
+
+.TextUpdate{
+  position: relative;
+  border-right: 2px solid rgba(255,255,255,.75);
+  white-space: nowrap;
+  overflow: hidden;
+}
+.TextUpdate{
+  animation: typewriter 4s steps(44) 0.5s 1 normal both,
+            blinkTextCursor 500ms steps(44) infinite normal;
+}
+/* normal: Go forward
+reverse: Go backward */
+
+@keyframes typewriter{
+  from{ width: 0; } to{ width: 14.5em; }
+}
+@keyframes blinkTextCursor{
+  from{ border-right-color: rgba(255, 255, 255, 1) } to{ border-right-color: transparent }
+}
+
+
+.Doc{
+  height:auto
+}
 
 .navbar {
   position: fixed;
@@ -383,6 +437,7 @@
     right: 00px;
     height: 40vh;
     opacity: 0.5;
+    
   }
   .imgStatus{
     width: 25%;

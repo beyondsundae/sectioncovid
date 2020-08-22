@@ -28,6 +28,12 @@ const Main = () => {
     const [ Deaths, setDeaths ] = useState()
     const [ NewDeaths, setNewDeaths ] = useState()
 
+    const [ Animation, setAnimation ] = useState({}) 
+    const [ AnimationSituation, setAnimationSituation ] = useState({}) 
+
+    const hrefArray = window.location.href.split('/')
+    const href = hrefArray[hrefArray.length - 1]
+
     const GetDataCovid = async ()=>{
         await axios.get( 'https://covid19.th-stat.com/api/open/today' )
         .then ( (res) =>{
@@ -51,6 +57,17 @@ const Main = () => {
         GetDataCovid()
     }, [])
 
+    useEffect(() =>{
+        if(href == "#sectionTwo"){
+            setAnimation({animation: "Fade 1.5s ease-in-out"})
+            setAnimationSituation({animation: "MovingBott 1.5s ease"})
+        }
+        else{
+            setAnimation({ })
+            setAnimationSituation({})
+        }
+    }, [href])
+
     return (
         <div className='main' id='main' >
             <div className='container-fluid' style={ Style.PaddingForMenu }/>
@@ -58,13 +75,13 @@ const Main = () => {
             <div className='container-fluid ' style={ Style.AreaHeightContent }>
                 <div className='row ' style={{paddingTop: "10vh", height: "82vh"}}>
                     <div className='p-5 col-4 d-none d-md-block text-center' >
-                        <img className="hospital" src={ Hostpital } />
+                        <img className="hospital" src={ Hostpital } style={Animation}/>
                     </div>
 
                     <div className='col justify-content-center'>
 
-                        <div className="row">
-                            <div className="col col-lg-6 col-md-12 " >
+                        <div className="row" >
+                            <div className="col col-lg-6 col-md-12 " style={AnimationSituation}>
                                 <img className="imgStatus" src={ Fever } />
 
                                     <div className="Status"  >
@@ -78,7 +95,7 @@ const Main = () => {
                                     </div>   
                             </div>
 
-                            <div className="col col-lg-6 col-md-12 ">
+                            <div className="col col-lg-6 col-md-12 " style={AnimationSituation}>
                                 <img className="imgStatus" src={ Strong }/>
                                 
                                     <div className="Status">
@@ -94,7 +111,7 @@ const Main = () => {
                         </div>
 
                         <div className="row" >
-                            <div className="col col-lg-6 col-md-12">
+                            <div className="col col-lg-6 col-md-12" style={AnimationSituation}>
                                 <img className="imgStatus" src={ Doctor }/>
 
                                     <div className="Status">
@@ -108,7 +125,7 @@ const Main = () => {
                                     </div>   
                             </div>
 
-                            <div className="col col-lg-6 col-md-12 ">
+                            <div className="col col-lg-6 col-md-12 " style={AnimationSituation}>
                                 <img className="imgStatus" src={ Dead }/>
 
                                     <div className="Status">

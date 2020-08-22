@@ -10,6 +10,12 @@ import DocMed from './SVG/health__flatline.svg'
 const Content2 = () => {
     const [DailyData, setDailyData] = useState([]);
 
+    const [ AnimationBoy, setAnimationBoy ] = useState({}) 
+    const [ AnimationGirl, setAnimationGirl ] = useState({}) 
+
+    const hrefArray = window.location.href.split('/')
+    const href = hrefArray[hrefArray.length - 1]
+
     const Style = ({ 
         PaddingForMenu:{ 
             height: "10vh",
@@ -52,6 +58,7 @@ const Content2 = () => {
                     <XAxis dataKey="Date" stroke="#8884d8" />
                     <YAxis/>
                     <Tooltip wrapperStyle={{ width: 200, backgroundColor: '#ccc' }} />
+                    
                     <Legend/>
                     <CartesianGrid stroke="#ccc" strokeDasharray="3 3" />
                     <Bar name="New Infected" dataKey="NewConfirmed" fill="#5B8BEB" barSize={30} />
@@ -86,6 +93,17 @@ const Content2 = () => {
         console.log(DailyData)
     }, [DailyData])
 
+    useEffect (() =>{
+        if(href == "#sectionFour"){
+            setAnimationBoy({animation: "MovingLeft 1s ease"})
+            setAnimationGirl({animation: "MovingRight 1s ease"})
+        }
+        else{
+            setAnimationBoy({})
+            setAnimationGirl({})
+        }
+    },[href])
+
     return (
         <div className='content2' id='content2'>
             <div className="container-fluid" style={ Style.PaddingForMenu }/>
@@ -99,7 +117,7 @@ const Content2 = () => {
                         <div className="col-8 col-md-7 col-lg-7 col-xl-12 ">
                             {ChartNConfirmedandNRecoverd()}
                         </div>
-                        <div className="col-4 col-md-5 col-lg-5 col-xl-12 text-center" style={{height: "auto"}}>
+                        <div className="Doc col-4 col-md-5 col-lg-5 col-xl-12 text-center" style={AnimationGirl}>
                             <img className="DocPic " src={ DocMed }/>
                         </div>
                     </div>
@@ -107,7 +125,7 @@ const Content2 = () => {
 
                 <div className="col-12 col-md-12 col-lg-12 col-xl-6 ">
                     <div className="row">
-                        <div className="col-4 col-md-5 col-lg-5 col-xl-12 " style={{height: "auto"}}>
+                        <div className="Doc col-4 col-md-5 col-lg-5 col-xl-12 " style={AnimationGirl}>
                             <img className="DocPic" src={ DocChart }/>
                         </div>
                         <div className="col-8 col-md-7 col-lg-7 col-xl-12 ">

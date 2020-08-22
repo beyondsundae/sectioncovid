@@ -9,6 +9,11 @@ import TableIcons from './Parts/TableIcons'
 const Content3 = () => {
     const [ Province, setProvince ] = useState([])
 
+    const [ AnimationFlag, setAnimationFlag ] = useState({}) 
+
+    const hrefArray = window.location.href.split('/')
+    const href = hrefArray[hrefArray.length - 1]
+
     const Style = ({ 
         PaddingForMenu:{ 
             height: "10vh",
@@ -78,6 +83,15 @@ const Content3 = () => {
         GetProvinces()
     }, [])
 
+    useEffect (() =>{
+        if(href == "#sectionFive"){
+            setAnimationFlag({animation: "MovingFlag 1s ease"})
+        }
+        else{
+            setAnimationFlag({})
+        }
+    },[href])
+
     return (
         <div className='content3' id='content3'>
             <div className="container-fluid " style={ Style.PaddingForMenu }/>
@@ -85,7 +99,7 @@ const Content3 = () => {
                 <div className="container-fluid " style={ Style.AreaHeightContent }>
                     <div className="row " style={{paddingTop: "3vh", height: "89vh"}}>
 
-                        <div className="col col-md-12 col-lg-6 ">
+                        <div className="Flag col col-md-12 col-lg-6" style={AnimationFlag}>
                             <img src={thai} className="ThPic"/>
                         </div>
 

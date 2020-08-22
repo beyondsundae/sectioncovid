@@ -7,6 +7,13 @@ import CoughF from './SVG/coughingF.svg'
 const Content = () => {
     const [ Gender, setGender ] = useState([]);
 
+    const [ AnimationPie, setAnimationPie ] = useState({}) 
+    const [ AnimationBoy, setAnimationBoy ] = useState({}) 
+    const [ AnimationGirl, setAnimationGirl ] = useState({}) 
+
+    const hrefArray = window.location.href.split('/')
+    const href = hrefArray[hrefArray.length - 1]
+
     const Style = ({ 
         PaddingForMenu:{ 
             height: "0vh",
@@ -73,6 +80,19 @@ const Content = () => {
         console.log(Gender)
     },[Gender])
 
+    useEffect (() =>{
+        if(href == "#sectionThree"){
+            setAnimationPie({animation: "Moving 1.2s ease"})
+            setAnimationBoy({animation: "MovingLeft 1s ease"})
+            setAnimationGirl({animation: "MovingRight 1s ease"})
+        }
+        else{
+            setAnimationPie({})
+            setAnimationBoy({})
+            setAnimationGirl({})
+        }
+    },[href])
+
     return (
         <div className='content' id='content'>
             <div className=" container-fluid " style={ Style.PaddingForMenu }/>
@@ -87,19 +107,19 @@ const Content = () => {
                                 </div>
                             </div>
 
-                            <div className="col col-lg-6 col-md-10 ">
-                                <img src={Cough}/>
+                            <div className="Boy col col-lg-6 col-md-10 " style={AnimationBoy}>
+                                <img src={Cough} />
                                 <div style={ Style.FontGender }>Male <div style={ Style.FontAmount }>{Gender.Male}</div></div>
                             </div>
                             
-                            <div className="col col-lg-6 col-md-10">
-                                <img src={CoughF}/>
+                            <div className="Girl col col-lg-6 col-md-10" style={AnimationGirl}>
+                                <img src={CoughF} />
                                 <div style={ Style.FontGender }>Female <div style={ Style.FontAmount }>{Gender.Female}</div></div>
                             </div>
                         </div>
                     </div>
 
-                    <div className="col order-sm-last order-first">
+                    <div className="MovingChart col order-sm-last order-first" style={AnimationPie}>
                         { PieGender() }
                     </div>
                 </div>
