@@ -11,8 +11,10 @@ function Navbar() {
     const [ColorNav, setColorNav] = useState({color: "white ", textDecoration: "none"})
     const [Menubar , setMenubar ] = useState(MenuW)
 
-    const hrefArray = window.location.href.split('/')
-    const href = hrefArray[hrefArray.length - 1]
+    // const hrefArray = window.location.href.split('/')
+    // const href = hrefArray[hrefArray.length - 1]
+
+    const ChectURL = window.location.href
 
     const NavWhite =()=>{
         setColorNav({color: "white ", textDecoration: "none"})
@@ -26,30 +28,30 @@ function Navbar() {
     }
 
     const checkhref =()=>{
-        if (href == '#sectionOne') {
+        if (ChectURL.includes('#sectionOne')){
             NavWhite()
         }
-        else if (href == '#sectionTwo'){
+        else if (ChectURL.includes('#sectionTwo')){
             NavWhite()
         }
-        else if (href == '#sectionThree'){
+        else if (ChectURL.includes('#sectionThree')){
             NavBlack()
         }
-        else if (href == '#sectionFour'){
+        else if (ChectURL.includes('#sectionFour')){
             NavWhite()
         }
-        else if (href == '#sectionFive'){
+        else if (ChectURL.includes('#sectionFive')){
             NavBlack()
         }
-        else if (href == '#sectionSix'){
+        else if (ChectURL.includes('#sectionSix')){
             NavWhite()
         }
     }
     
     useEffect(() => {
-        console.log(href)
+        console.log(ChectURL)
         checkhref()
-    },[href])
+    },[ChectURL])
 
     return (
         <div className=" " >

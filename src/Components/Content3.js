@@ -11,8 +11,10 @@ const Content3 = () => {
 
     const [ AnimationFlag, setAnimationFlag ] = useState({}) 
 
-    const hrefArray = window.location.href.split('/')
-    const href = hrefArray[hrefArray.length - 1]
+    // const hrefArray = window.location.href.split('/')
+    // const href = hrefArray[hrefArray.length - 1]
+
+    const ChectURL = window.location.href
 
     const Style = ({ 
         PaddingForMenu:{ 
@@ -84,13 +86,13 @@ const Content3 = () => {
     }, [])
 
     useEffect (() =>{
-        if(href == "#sectionFive"){
+        if(ChectURL.includes("#sectionFive")){
             setAnimationFlag({animation: "MovingFlag 1s ease"})
         }
         else{
             setAnimationFlag({})
         }
-    },[href])
+    },[ChectURL])
 
     return (
         <div className='content3' id='content3'>

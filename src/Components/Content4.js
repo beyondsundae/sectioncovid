@@ -11,8 +11,10 @@ function Content4() {
     const [ AnimationB, setAnimationB ] = useState({ })
     const [ AnimationC, setAnimationC ] = useState({ })
 
-    const hrefArray = window.location.href.split('/')
-    const href = hrefArray[hrefArray.length - 1]
+    // const hrefArray = window.location.href.split('/')
+    // const href = hrefArray[hrefArray.length - 1]
+
+    const ChectURL = window.location.href
 
     const Style = ({ 
         PaddingForMenu:{ 
@@ -29,7 +31,7 @@ function Content4() {
     })
 
     useEffect (() =>{
-        if(href == "#sectionSix"){
+        if(ChectURL.includes("#sectionSix")){
             setAnimationA({animation: "MovingLeft 1s ease"})
             setAnimationB({animation: "MovingBott 1s ease"})
             setAnimationC({animation: "MovingRight 1s ease"})
@@ -39,7 +41,7 @@ function Content4() {
             setAnimationB({})
             setAnimationC({})
         }
-    },[href])
+    },[ChectURL])
 
     return (
         <div className='content4' id="content4">

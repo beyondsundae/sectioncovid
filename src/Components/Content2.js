@@ -13,8 +13,10 @@ const Content2 = () => {
     const [ AnimationBoy, setAnimationBoy ] = useState({}) 
     const [ AnimationGirl, setAnimationGirl ] = useState({}) 
 
-    const hrefArray = window.location.href.split('/')
-    const href = hrefArray[hrefArray.length - 1]
+    // const hrefArray = window.location.href.split('/')
+    // const href = hrefArray[hrefArray.length - 1]
+
+    const ChectURL = window.location.href
 
     const Style = ({ 
         PaddingForMenu:{ 
@@ -90,11 +92,11 @@ const Content2 = () => {
     }, [])
 
     useEffect(() => {
-        console.log(DailyData)
+        // console.log(DailyData)
     }, [DailyData])
 
     useEffect (() =>{
-        if(href == "#sectionFour"){
+        if(ChectURL.includes("#sectionFour")){
             setAnimationBoy({animation: "MovingLeft 1s ease"})
             setAnimationGirl({animation: "MovingRight 1s ease"})
         }
@@ -102,7 +104,7 @@ const Content2 = () => {
             setAnimationBoy({})
             setAnimationGirl({})
         }
-    },[href])
+    },[ChectURL])
 
     return (
         <div className='content2' id='content2'>

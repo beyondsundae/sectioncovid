@@ -31,8 +31,10 @@ const Main = () => {
     const [ Animation, setAnimation ] = useState({}) 
     const [ AnimationSituation, setAnimationSituation ] = useState({}) 
 
-    const hrefArray = window.location.href.split('/')
-    const href = hrefArray[hrefArray.length - 1]
+    // const hrefArray = window.location.href.split('/')
+    // const href = hrefArray[hrefArray.length - 1]
+
+    const ChectURL = window.location.href
 
     const GetDataCovid = async ()=>{
         await axios.get( 'https://covid19.th-stat.com/api/open/today' )
@@ -58,7 +60,7 @@ const Main = () => {
     }, [])
 
     useEffect(() =>{
-        if(href == "#sectionTwo"){
+        if(ChectURL.includes("#sectionTwo")){
             setAnimation({animation: "Fade 1.5s ease-in-out"})
             setAnimationSituation({animation: "MovingBott 1.5s ease"})
         }
@@ -66,7 +68,8 @@ const Main = () => {
             setAnimation({ })
             setAnimationSituation({})
         }
-    }, [href])
+ 
+    }, [ChectURL])
 
     return (
         <div className='main' id='main' >
