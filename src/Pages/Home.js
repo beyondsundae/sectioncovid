@@ -14,20 +14,7 @@ function Home() {
 
     const [ Data, setData ] = useState();
    
-    let options = {
-        activeClass:          'active',
-        sectionClassName:     'section',
-        anchors:              ['sectionOne',
-                                'sectionTwo', 
-                                'sectionThree', 
-                                'sectionFour',
-                                'sectionFive',
-                                'sectionSix',],
-        delay:                500,
-        navigation:           true,
-        verticalAlign:        false,
-        // scrollBar:            true,
-      };
+    
 
     const GetdataToday = async () => {
         await axios.get( 'https://covid19.th-stat.com/api/open/today' )
