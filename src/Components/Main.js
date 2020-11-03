@@ -78,7 +78,7 @@ const Main = () => {
             <div className='container-fluid ' style={ Style.AreaHeightContent }>
                 <div className='row ' style={{paddingTop: "10vh", height: "82vh"}}>
                     <div className='p-5 col-4 d-none d-md-block text-center' >
-                        <img className="hospital" src={ Hostpital } style={Animation}/>
+                        <img className="hospital " src={ Hostpital } uk-scrollspy="cls:uk-animation-fade; repeat: true"/>
                     </div>
 
                     <div className='col justify-content-center'>

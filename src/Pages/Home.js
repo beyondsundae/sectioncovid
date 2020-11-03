@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
-import { SectionsContainer, Section } from 'react-fullpage';
+
+// import Scrollbar from 'react-smooth-scrollbar';
+import Scrollbar from 'smooth-scrollbar-react';
 
 import Navbar from '../Components/Navbar';
 import Main from '../Components/Main';
@@ -14,8 +16,6 @@ function Home() {
 
     const [ Data, setData ] = useState();
    
-    
-
     const GetdataToday = async () => {
         await axios.get( 'https://covid19.th-stat.com/api/open/today' )
         .then ( ( res ) => {
@@ -32,20 +32,29 @@ function Home() {
 
     useEffect (()=>{
         GetdataToday()
-        
     }, [])
     
     return (
         <div>
-            <SectionsContainer  {...options}>
-                <Section><Hommie updateDate ={ Data }/></Section>
-                <Section><Main /></Section>
-                <Section><Content /></Section>
-                <Section><Content2 /></Section>
-                <Section><Content3 /></Section>
-                <Section><Content4 /></Section>
-            </SectionsContainer>
-            <Navbar/>
+            <Scrollbar
+            //   style={{ height: "100vh" }}
+              damping={0.3}
+            //   renderByPixels={true}
+            //   plugins={{
+            //     overscroll: { damping: 0.1 }
+            //   }}
+            >
+                <div style={{height: "100vh"}}>
+                    <Hommie updateDate ={ Data }/>
+                <Main /> 
+                <Content />
+                <Content2 />
+                <Content3 />
+                <Content4 />
+                </div>
+            </Scrollbar>
+                
+            {/* <Navbar/> */}
         </div>
     )
     //beyondsundae
