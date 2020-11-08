@@ -48,9 +48,9 @@ function Home() {
                     <Hommie updateDate ={ Data }/>
                 <Main /> 
                 <Content />
-                <Content2 />
+                {/* <Content2 />
                 <Content3 />
-                <Content4 />
+                <Content4 /> */}
                 </div>
             </Scrollbar>
                 

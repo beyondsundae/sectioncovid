@@ -20,6 +20,7 @@ const Hommie = ( props ) => {
         }
         
     })
+
     // border border-danger"
     return (
         <div className="hommie" id="hommie" >
