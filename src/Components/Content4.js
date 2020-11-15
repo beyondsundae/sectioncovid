@@ -1,20 +1,13 @@
 import React, { useState, useEffect } from 'react'
 
+import { useInView } from "react-intersection-observer";
+
 import SoapHand from './SVG/soap_flatline.svg'
 import Washhand from './SVG/washing_hands_flatline (1).svg'
 import WearMask from './SVG/wearing_a_mask__flatline copy.svg'
 
 
 function Content4() {
-
-    const [ AnimationA, setAnimationA ] = useState({ })
-    const [ AnimationB, setAnimationB ] = useState({ })
-    const [ AnimationC, setAnimationC ] = useState({ })
-
-    // const hrefArray = window.location.href.split('/')
-    // const href = hrefArray[hrefArray.length - 1]
-
-    const ChectURL = window.location.href
 
     const Style = ({ 
         PaddingForMenu:{ 
@@ -30,18 +23,27 @@ function Content4() {
         }
     })
 
-    useEffect (() =>{
-        if(ChectURL.includes("#sectionSix")){
-            setAnimationA({animation: "MovingLeft 1s ease"})
-            setAnimationB({animation: "MovingBott 1s ease"})
-            setAnimationC({animation: "MovingRight 1s ease"})
-        }
-        else{
-            setAnimationA({})
-            setAnimationB({})
-            setAnimationC({})
-        }
-    },[ChectURL])
+    const [ref, inView] = useInView({
+        threshold: 0.5,
+        triggerOnce: true
+        });
+
+    const [ref2, inView2] = useInView({
+        threshold: 0.5,
+        triggerOnce: true
+        });
+    
+    const [ref3, inView3] = useInView({
+        threshold: 0.5,
+        triggerOnce: true
+        });
+
+    const [ref4, inView4] = useInView({
+        threshold: 0.5,
+        triggerOnce: true
+        });
+
+    
 
     return (
         <div className='content4' id="content4">
@@ -51,14 +53,31 @@ function Content4() {
                 <div className="container-fluid" style={ Style.AreaHeightContent }>
                     <div className="row justify-content-center">
 
-                        <div className="col-12 " style={ Style.Font }>
-                            Be safe!
+                        <div className="col-12 " style={ Style.Font } ref={ref4}>
+                            <div className={inView ? "animate__animated animate__fadeIn animate__infinite	infinite" : "d-none"} >
+                                  Be safe!
+                            </div>
                         </div>
 
-                        <img className="IconSafe col col-lg-4" src={ SoapHand } style={AnimationA}/>
-                        <img className="IconSafe col col-lg-4" src={ Washhand } style={AnimationB}/>
-                        <img className="IconSafe col col-lg-4" src={ WearMask } style={AnimationC}/>
+                        <div ref={ref} className=" IconSafe col col-lg-4">
+                            <img 
+                                className={inView ? "animate__animated animate__bounceIn" : "d-none"} 
+                                src={ SoapHand } />
+                        </div>
+                        
 
+                        <div ref={ref2} className=" IconSafe col col-lg-4">
+                            <img 
+                                className={inView2 ? "animate__animated animate__bounceIn animate__slow" : "d-none"} 
+                                src={ Washhand } />
+                        </div>
+                        
+
+                        <div ref={ref3} className=" IconSafe col col-lg-4">
+                            <img 
+                                className={inView3 ? "animate__animated animate__bounceIn animate__slower " : "d-none"} 
+                                src={ WearMask } />
+                        </div>
                     </div>
                 </div>
             

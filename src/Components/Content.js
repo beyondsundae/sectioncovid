@@ -1,20 +1,14 @@
 import React,{ useEffect, useState } from 'react'
 import axios from 'axios'
 import { PieChart, Pie, ResponsiveContainer, Tooltip, Legend, Cell } from 'recharts';
+
+import { useInView } from "react-intersection-observer";
+
 import Cough from './SVG/coughing.svg'
 import CoughF from './SVG/coughingF.svg'
 
 const Content = () => {
     const [ Gender, setGender ] = useState([]);
-
-    const [ AnimationPie, setAnimationPie ] = useState({}) 
-    const [ AnimationBoy, setAnimationBoy ] = useState({}) 
-    const [ AnimationGirl, setAnimationGirl ] = useState({}) 
-
-    // const hrefArray = window.location.href.split('/')
-    // const href = hrefArray[hrefArray.length - 1]
-
-    const ChectURL = window.location.href
 
     const Style = ({ 
         PaddingForMenu:{ 
@@ -32,6 +26,11 @@ const Content = () => {
             fontWeight: "bold"
         }
     })
+
+    const [ref, inView] = useInView({
+        threshold: 0.5,
+        triggerOnce: true
+      });
 
     const GetGender = async () => {
         await axios.get( 'https://covid19.th-stat.com/api/open/cases/sum' )
@@ -78,23 +77,6 @@ const Content = () => {
         GetGender()
     }, []) 
 
-    useEffect(() => {
-        // console.log(Gender)
-    },[Gender])
-
-    useEffect (() =>{
-        if(ChectURL.includes("#sectionThree")){
-            setAnimationPie({animation: "Moving 1.2s ease"})
-            setAnimationBoy({animation: "MovingLeft 1s ease"})
-            setAnimationGirl({animation: "MovingRight 1s ease"})
-        }
-        else{
-            setAnimationPie({})
-            setAnimationBoy({})
-            setAnimationGirl({})
-        }
-    },[ChectURL])
-
     return (
         <div className='content' id='content'>
             <div className=" container-fluid " style={ Style.PaddingForMenu }/>
@@ -109,20 +91,23 @@ const Content = () => {
                                 </div>
                             </div>
 
-                            <div className="Boy col col-lg-6 col-md-10 " style={AnimationBoy}>
+                            <div className="Boy col col-lg-6 col-md-10 " >
                                 <img src={Cough} />
                                 <div style={ Style.FontGender }>Male <div style={ Style.FontAmount }>{Gender.Male}</div></div>
                             </div>
                             
-                            <div className="Girl col col-lg-6 col-md-10" style={AnimationGirl}>
+                            <div className="Girl col col-lg-6 col-md-10" >
                                 <img src={CoughF} />
                                 <div style={ Style.FontGender }>Female <div style={ Style.FontAmount }>{Gender.Female}</div></div>
                             </div>
                         </div>
                     </div>
 
-                    <div className="MovingChart col order-sm-last order-first" style={AnimationPie}>
-                        { PieGender() }
+                    <div className="MovingChart col order-sm-last order-first" ref={ref} >
+                        <div className={inView ? "animate__animated animate__zoomInDown " : "d-none"}>
+                            { PieGender() }
+                        </div>
+                        
                     </div>
                 </div>
             </div>

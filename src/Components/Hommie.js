@@ -38,9 +38,9 @@ const Hommie = ( props ) => {
 
                     <div className="col" >
                         <div className="pt-5" style={{color:'white'}}>
-                            <div className="Textcovid animate__animated animate__bounce" style={{textAlign: "left"}}>Covid-19</div>
+                            <div className="Textcovid animate__animated animate__bounce animate__repeat-3" style={{textAlign: "left"}}>Covid-19</div>
                             <div className="TextSituation" style={{textAlign: "left"}}>Thailand Situation</div>
-                            <p className="TextUpdate TextAnimation" style={{textAlign: "left"}}>Last update: { props.updateDate }</p>
+                            <p className="animate__animated animate__flash animate__delay-1s " style={{textAlign: "left", fontSize: "2em"}}>Last update: { props.updateDate }</p>
                         </div>
                     </div>
 

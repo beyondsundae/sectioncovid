@@ -7,16 +7,10 @@ import { PieChart, Pie,ResponsiveContainer,
 import DocChart from './SVG/doctor_flatline(2).svg'
 import DocMed from './SVG/health__flatline.svg'
 
+import { useInView } from "react-intersection-observer";
+
 const Content2 = () => {
     const [DailyData, setDailyData] = useState([]);
-
-    const [ AnimationBoy, setAnimationBoy ] = useState({}) 
-    const [ AnimationGirl, setAnimationGirl ] = useState({}) 
-
-    // const hrefArray = window.location.href.split('/')
-    // const href = hrefArray[hrefArray.length - 1]
-
-    const ChectURL = window.location.href
 
     const Style = ({ 
         PaddingForMenu:{ 
@@ -35,6 +29,16 @@ const Content2 = () => {
         // }
     })
 
+    const [ref, inView] = useInView({
+        threshold: 0.5,
+        triggerOnce: true
+      });
+
+      const [ref2, inView2] = useInView({
+        threshold: 0.5,
+        triggerOnce: true
+      });
+
     const Get7Days = async () => {
         await axios.get('https://covid19.th-stat.com/api/open/timeline') 
         .then( ( response )  => {
@@ -49,7 +53,7 @@ const Content2 = () => {
         })
         } 
     
-
+        //beyondsundae
     const ChartNConfirmedandNRecoverd = () => {
         const Selected7Days = DailyData.slice(-7)
         // console.log(Selected7Days)
@@ -91,21 +95,6 @@ const Content2 = () => {
         
     }, [])
 
-    useEffect(() => {
-        // console.log(DailyData)
-    }, [DailyData])
-
-    useEffect (() =>{
-        if(ChectURL.includes("#sectionFour")){
-            setAnimationBoy({animation: "MovingLeft 1s ease"})
-            setAnimationGirl({animation: "MovingRight 1s ease"})
-        }
-        else{
-            setAnimationBoy({})
-            setAnimationGirl({})
-        }
-    },[ChectURL])
-
     return (
         <div className='content2' id='content2'>
             <div className="container-fluid" style={ Style.PaddingForMenu }/>
@@ -119,16 +108,16 @@ const Content2 = () => {
                         <div className="col-8 col-md-7 col-lg-7 col-xl-12 ">
                             {ChartNConfirmedandNRecoverd()}
                         </div>
-                        <div className="Doc col-4 col-md-5 col-lg-5 col-xl-12 text-center" style={AnimationGirl}>
-                            <img className="DocPic " src={ DocMed }/>
+                        <div className="Doc col-4 col-md-5 col-lg-5 col-xl-12 text-center" ref={ref}>
+                            <img className={inView ? "animate__animated animate__slideInUp  DocPic " : "d-none"} src={ DocMed }/>
                         </div>
                     </div>
                 </div>
 
                 <div className="col-12 col-md-12 col-lg-12 col-xl-6 ">
                     <div className="row">
-                        <div className="Doc col-4 col-md-5 col-lg-5 col-xl-12 " style={AnimationGirl}>
-                            <img className="DocPic" src={ DocChart }/>
+                        <div className="Doc col-4 col-md-5 col-lg-5 col-xl-12 " ref={ref2}>
+                            <img className={inView ? "animate__animated animate__slideInUp  DocPic " : "d-none"} src={ DocChart }/>
                         </div>
                         <div className="col-8 col-md-7 col-lg-7 col-xl-12 ">
                             {ChartConfirmedandRecovered()}

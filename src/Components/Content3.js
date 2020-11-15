@@ -2,19 +2,14 @@ import React, { useEffect, useState } from 'react'
 import axios from "axios"
 import thai from './SVG/TH_flatline.svg'
 
+import { useInView } from "react-intersection-observer";
+
 import MaterialTable from "material-table";
 
 import TableIcons from './Parts/TableIcons'
 
 const Content3 = () => {
     const [ Province, setProvince ] = useState([])
-
-    const [ AnimationFlag, setAnimationFlag ] = useState({}) 
-
-    // const hrefArray = window.location.href.split('/')
-    // const href = hrefArray[hrefArray.length - 1]
-
-    const ChectURL = window.location.href
 
     const Style = ({ 
         PaddingForMenu:{ 
@@ -32,6 +27,11 @@ const Content3 = () => {
             fontWeight: "bold"
         }
     })
+
+    const [ref, inView] = useInView({
+        threshold: 0.5,
+        triggerOnce: true
+      });
 
     const dataProvince = {
         columns : [
@@ -85,15 +85,6 @@ const Content3 = () => {
         GetProvinces()
     }, [])
 
-    useEffect (() =>{
-        if(ChectURL.includes("#sectionFive")){
-            setAnimationFlag({animation: "MovingFlag 1s ease"})
-        }
-        else{
-            setAnimationFlag({})
-        }
-    },[ChectURL])
-
     return (
         <div className='content3' id='content3'>
             <div className="container-fluid " style={ Style.PaddingForMenu }/>
@@ -101,8 +92,8 @@ const Content3 = () => {
                 <div className="container-fluid " style={ Style.AreaHeightContent }>
                     <div className="row " style={{paddingTop: "3vh", height: "89vh"}}>
 
-                        <div className="Flag col col-md-12 col-lg-6" style={AnimationFlag}>
-                            <img src={thai} className="ThPic"/>
+                        <div className="Flag col col-md-12 col-lg-6" ref={ref}>
+                            <img src={thai} className={inView ? "animate__animated animate__slideInUp  ThPic " : "d-none"}/>
                         </div>
 
                         <div className="col col-md-12 col-lg-6 pt-5 ">
@@ -111,7 +102,7 @@ const Content3 = () => {
                                 icons={TableIcons}
                                 columns={[
                                     {title: 'Province', field: 'name'},
-                                    {title: 'Case', field: 'amount'}
+                                    {title: 'Case(s)', field: 'amount'}
                                 ]}
                                 data={
                                     dataProvince.rows
