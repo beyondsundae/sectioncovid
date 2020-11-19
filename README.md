@@ -38,7 +38,7 @@
 
 # Overview
 
-![enter image description here](https://media.giphy.com/media/1sH2DWfK72p2FwsbuJ/giphy.gif)
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/59742129/99689147-33b8d680-2ab9-11eb-99d2-1fa7516da82c.gif)
 
 **Figure 1.1** Overview
 
